@@ -959,7 +959,13 @@ class Actor(eqx.Module):
 
         mean_nm = mean_nm + jnp.array([v for _, v, _ in JOINT_BIASES])[:, None]
 
-        dist_n = ksim.MixtureOfGaussians(means_nm=mean_nm, stds_nm=std_nm, logits_nm=logits_nm)
+        # Create mixture of Gaussians using distrax
+        mixture_dist = distrax.Categorical(logits=logits_nm)
+        component_dist = distrax.Normal(loc=mean_nm, scale=std_nm)
+        dist_n = distrax.MixtureSameFamily(
+            mixture_distribution=mixture_dist,
+            components_distribution=component_dist
+        )
 
         return dist_n, jnp.stack(out_carries, axis=0)
 
@@ -1433,37 +1439,26 @@ class ZbotWalkingTask(ksim.PPOTask[ZbotWalkingTaskConfig]):
             torque_noise_type="none",
         )
 
-    def get_physics_randomizers(self, physics_model: ksim.PhysicsModel) -> list[ksim.PhysicsRandomizer]:
-        return [
-            ksim.StaticFrictionRandomizer(),
-            ksim.ArmatureRandomizer(),
-            ksim.AllBodiesMassMultiplicationRandomizer(scale_lower=0.95, scale_upper=1.15),
-            ksim.JointDampingRandomizer(),
-            ksim.JointZeroPositionRandomizer(scale_lower=math.radians(-2), scale_upper=math.radians(2)),
-            ksim.FloorFrictionRandomizer.from_geom_name(
+    def get_physics_randomizers(self, physics_model: ksim.PhysicsModel) -> dict[str, ksim.PhysicsRandomizer]:
+        return {
+            "static_friction": ksim.StaticFrictionRandomizer(),
+            "armature": ksim.ArmatureRandomizer(),
+            "mass_multiplication": ksim.AllBodiesMassMultiplicationRandomizer(scale_lower=0.95, scale_upper=1.15),
+            "joint_damping": ksim.JointDampingRandomizer(),
+            "joint_zero_position": ksim.JointZeroPositionRandomizer(scale_lower=math.radians(-2), scale_upper=math.radians(2)),
+            "floor_friction": ksim.FloorFrictionRandomizer.from_geom_name(
                 model=physics_model, floor_geom_name="floor", scale_lower=0.3, scale_upper=1.5
             ),
             # 1σ ≈ 1.5°, gives ~99.7% within 4.5°
             # enable yaw randomization with 1σ ≈ 1°
             # 5mm standard deviation
-            ksim.IMUAlignmentRandomizer(
+            "imu_alignment": ksim.IMUAlignmentRandomizer(
                 site_name="imu_site", tilt_std_rad=math.radians(5), yaw_std_rad=math.radians(1.0), translate_std_m=0.005
             ),
-        ]
+        }
 
     def get_events(self, physics_model: ksim.PhysicsModel) -> list[ksim.Event]:
-        return [
-            ksim.PushEvent(
-                x_linvel=0.1,
-                y_linvel=0.1,
-                z_linvel=0.05,
-                x_angvel=0.0,
-                y_angvel=0.0,
-                z_angvel=0.0,
-                vel_range=(0.05, 0.15),
-                interval_range=(2.0, 4.0),
-            ),
-        ]
+        return []
 
     def get_resets(self, physics_model: ksim.PhysicsModel) -> list[ksim.Reset]:
         return [
@@ -1472,135 +1467,128 @@ class ZbotWalkingTask(ksim.PPOTask[ZbotWalkingTaskConfig]):
             # ksim.RandomHeadingReset(), # because only naive forward reward is used at the moment
         ]
 
-    def get_observations(self, physics_model: ksim.PhysicsModel) -> list[ksim.Observation]:
-        obs_list = [
-            ksim.JointPositionObservation(noise=math.radians(0.00)),
-            ksim.JointVelocityObservation(noise=math.radians(0.0)),
-            ksim.ActuatorForceObservation(),
-            FeetechTorqueObservation(),
-            ksim.CenterOfMassInertiaObservation(),
-            ksim.CenterOfMassVelocityObservation(),
-            BaseHeightObservation(),
-            ksim.BasePositionObservation(),
-            ksim.BaseOrientationObservation(),
-            ksim.BaseLinearVelocityObservation(),
-            ksim.BaseAngularVelocityObservation(),
-            ksim.BaseLinearAccelerationObservation(),
-            ksim.BaseAngularAccelerationObservation(),
-            ImuOrientationObservation.create(
+    def get_observations(self, physics_model: ksim.PhysicsModel) -> dict[str, ksim.Observation]:
+        obs_dict = {
+            "joint_position_observation": ksim.JointPositionObservation(noise=ksim.AdditiveGaussianNoise(std=0.0)),
+            "joint_velocity_observation": ksim.JointVelocityObservation(noise=ksim.AdditiveGaussianNoise(std=0.0)),
+            "actuator_force_observation": ksim.ActuatorForceObservation(),
+            "feetech_torque": FeetechTorqueObservation(),
+            "center_of_mass_inertia_observation": ksim.CenterOfMassInertiaObservation(),
+            "center_of_mass_velocity_observation": ksim.CenterOfMassVelocityObservation(),
+            "base_height": BaseHeightObservation(),
+            "base_position_observation": ksim.BasePositionObservation(),
+            "base_orientation_observation": ksim.BaseOrientationObservation(),
+            "base_linear_velocity": ksim.BaseLinearVelocityObservation(),
+            "base_angular_velocity": ksim.BaseAngularVelocityObservation(),
+            "base_linear_acceleration": ksim.BaseLinearAccelerationObservation(),
+            "base_angular_acceleration": ksim.BaseAngularAccelerationObservation(),
+            "imu_orientation_observation": ImuOrientationObservation.create(
                 physics_model=physics_model,
                 framequat_name="imu_site_quat",
                 lag_range=(0.0, 0.1),
-                noise=math.radians(1),
+                noise=ksim.AdditiveGaussianNoise(std=math.radians(1)),
             ),
-            ksim.ActuatorAccelerationObservation(),
-            ksim.SensorObservation.create(
+            "actuator_acceleration": ksim.ActuatorAccelerationObservation(),
+            "sensor_observation_imu_acc": ksim.SensorObservation.create(
                 physics_model=physics_model,
                 sensor_name="imu_acc",
-                noise=0.5,
+                noise=ksim.AdditiveGaussianNoise(std=0.5),
             ),
-            ksim.SensorObservation.create(
+            "sensor_observation_imu_gyro": ksim.SensorObservation.create(
                 physics_model=physics_model,
                 sensor_name="imu_gyro",
-                noise=math.radians(0),
+                noise=ksim.AdditiveGaussianNoise(std=0.0),
             ),
-        ]
-        # get_observations
-        obs_list += [
-            ksim.SensorObservation.create(physics_model=physics_model, sensor_name="left_foot_touch", noise=0.0),
-            ksim.SensorObservation.create(physics_model=physics_model, sensor_name="right_foot_touch", noise=0.0),
-            ksim.SensorObservation.create(physics_model=physics_model, sensor_name="left_foot_force", noise=0.0),
-            ksim.SensorObservation.create(physics_model=physics_model, sensor_name="right_foot_force", noise=0.0),
-            FeetPositionObservation.create(
+            "sensor_observation_left_foot_touch": ksim.SensorObservation.create(physics_model=physics_model, sensor_name="left_foot_touch", noise=ksim.AdditiveGaussianNoise(std=0.0)),
+            "sensor_observation_right_foot_touch": ksim.SensorObservation.create(physics_model=physics_model, sensor_name="right_foot_touch", noise=ksim.AdditiveGaussianNoise(std=0.0)),
+            "sensor_observation_left_foot_force": ksim.SensorObservation.create(physics_model=physics_model, sensor_name="left_foot_force", noise=ksim.AdditiveGaussianNoise(std=0.0)),
+            "sensor_observation_right_foot_force": ksim.SensorObservation.create(physics_model=physics_model, sensor_name="right_foot_force", noise=ksim.AdditiveGaussianNoise(std=0.0)),
+            "feet_position_observation": FeetPositionObservation.create(
                 physics_model=physics_model,
                 foot_left_site_name="left_foot",
                 foot_right_site_name="right_foot",
                 floor_threshold=0.0,
                 in_robot_frame=True,
             ),
-        ]
+        }
 
         # Add action-position observation for each joint
-        obs_list.extend(
-            [
-                ksim.ActPosObservation.create(
-                    physics_model=physics_model,
-                    joint_name=joint_name,
-                )
-                for joint_name, _, _ in JOINT_BIASES
-            ]
-        )
+        for joint_name, _, _ in JOINT_BIASES:
+            obs_dict[f"act_pos_{joint_name}"] = ksim.ActPosObservation.create(
+                physics_model=physics_model,
+                joint_name=joint_name,
+            )
 
-        return obs_list
+        return obs_dict
 
-    def get_commands(self, physics_model: ksim.PhysicsModel) -> list[ksim.Command]:
-        return [
-            ConstantZeroCommand(
+    def get_commands(self, physics_model: ksim.PhysicsModel) -> dict[str, ksim.Command]:
+        return {
+            "zero_command": ConstantZeroCommand(
                 ctrl_dt=self.config.ctrl_dt,
             )
-        ]
+        }
 
-    def get_rewards(self, physics_model: ksim.PhysicsModel) -> list[ksim.Reward]:
-        return [
-            ksim.StayAliveReward(scale=1.0),
-            ksim.UprightReward(scale=1.0),
-            ksim.NaiveForwardReward(scale=5.0, clip_min=None, clip_max=0.2),
-            ksim.NaiveForwardOrientationReward(scale=0.3),
-            ksim.LinearVelocityPenalty(
-                index="y",
-                in_robot_frame=True,
-                norm="l1",
-                scale=-5.0,
-            ),
-            SimpleSingleFootContactReward(scale=0.3, stand_still_threshold=None),
-            FeetAirtimeReward(
+    def get_rewards(self, physics_model: ksim.PhysicsModel) -> dict[str, ksim.Reward]:
+        return {
+            "stay_alive": ksim.StayAliveReward(scale=1.0),
+            "upright": ksim.UprightReward(scale=1.0),
+            # "naive_forward": ksim.NaiveForwardReward(scale=5.0, clip_min=None, clip_max=0.2),
+            # "naive_forward_orientation": ksim.NaiveForwardOrientationReward(scale=0.3),
+            # "linear_velocity_penalty": ksim.LinearVelocityPenalty(
+            #     index="y",
+            #     in_robot_frame=True,
+            #     norm="l1",
+            #     scale=-5.0,
+            # ),
+            "simple_single_foot_contact": SimpleSingleFootContactReward(scale=0.3, stand_still_threshold=None),
+            "feet_airtime": FeetAirtimeReward(
                 scale=10.0,
                 ctrl_dt=self.config.ctrl_dt,
                 touchdown_penalty=0.1,
                 stand_still_threshold=None,
             ),
-            FeetOrientationReward.create(
+            "feet_orientation": FeetOrientationReward.create(
                 physics_model,
                 target_rp=(0.0, 0.0),
                 error_scale=0.25,
                 scale=0.3,
             ),
-            FeetTooClosePenalty(
+            "feet_too_close_penalty": FeetTooClosePenalty(
                 feet_pos_obs_key="feet_position_observation",
                 threshold_m=0.12,
                 scale=-0.5,
             ),
-            StraightLegPenalty.create_penalty(physics_model, scale=-0.5, scale_by_curriculum=True),
-            AnkleKneePenalty.create_penalty(physics_model, scale=-0.025, scale_by_curriculum=True),
-            # ksim.ActionVelocityPenalty(scale=-0.01,  scale_by_curriculum=True),
-            # ksim.JointVelocityPenalty (scale=-0.01,  scale_by_curriculum=True),
-            # ksim.JointAccelerationPenalty(scale=-0.01, scale_by_curriculum=True),
-            ContactForcePenalty( # NOTE this could actually be good but eliminate until needed
+            "straight_leg_penalty": StraightLegPenalty.create_penalty(physics_model, scale=-0.5, scale_by_curriculum=True),
+            "ankle_knee_penalty": AnkleKneePenalty.create_penalty(physics_model, scale=-0.025, scale_by_curriculum=True),
+            # "action_velocity_penalty": ksim.ActionVelocityPenalty(scale=-0.01,  scale_by_curriculum=True),
+            # "joint_velocity_penalty": ksim.JointVelocityPenalty (scale=-0.01,  scale_by_curriculum=True),
+            # "joint_acceleration_penalty": ksim.JointAccelerationPenalty(scale=-0.01, scale_by_curriculum=True),
+            "contact_force_penalty": ContactForcePenalty( # NOTE this could actually be good but eliminate until needed
                  scale=-0.03,
                  sensor_names=("sensor_observation_left_foot_force", "sensor_observation_right_foot_force"),
             ),
-            ArmPosePenalty.create_penalty(physics_model, scale=-2.00, scale_by_curriculum=True),
-            #ksim.ActionTrackingReward(
+            "arm_pose_penalty": ArmPosePenalty.create_penalty(physics_model, scale=-2.00, scale_by_curriculum=True),
+            # "action_tracking": ksim.ActionTrackingReward(
             #    error_scale=0.1,
             #    scale=0.4,
             #    use_exponential=False,
             #    scale_by_curriculum=True,
-            #),
-            #ksim.ActionVelocityPenalty(scale=-2.0, scale_by_curriculum=True),
-            ksim.ReachabilityPenalty(
+            # ),
+            # "action_velocity_penalty2": ksim.ActionVelocityPenalty(scale=-2.0, scale_by_curriculum=True),
+            "reachability_penalty": ksim.ReachabilityPenalty(
                 delta_max_j=tuple(float(x) for x in self.delta_max_j),
                 scale=-1.0,
                 squared=False,
                 scale_by_curriculum=True,
             ),
-        ]
+        }
 
-    def get_terminations(self, physics_model: ksim.PhysicsModel) -> list[ksim.Termination]:
-        return [
-            ksim.BadZTermination(unhealthy_z_lower=0.05, unhealthy_z_upper=0.5),
-            ksim.NotUprightTermination(max_radians=math.radians(60)),
-            ksim.EpisodeLengthTermination(max_length_sec=80),
-        ]
+    def get_terminations(self, physics_model: ksim.PhysicsModel) -> dict[str, ksim.Termination]:
+        return {
+            # "bad_z": ksim.BadZTermination(lower=0.05, upper=0.5),
+            "not_upright": ksim.NotUprightTermination(max_radians=math.radians(60)),
+            "episode_length": ksim.EpisodeLengthTermination(max_length_sec=80),
+        }
 
     def get_curriculum(self, physics_model: ksim.PhysicsModel) -> ksim.Curriculum:
         return ksim.EpisodeLengthCurriculum(
@@ -1611,9 +1599,9 @@ class ZbotWalkingTask(ksim.PPOTask[ZbotWalkingTaskConfig]):
             min_level=0.5,
         )
 
-    def get_model(self, key: PRNGKeyArray) -> Model:
+    def get_model(self, params) -> Model:
         return Model(
-            key,
+            params.key,
             num_inputs=NUM_ACTOR_INPUTS,
             num_outputs=NUM_JOINTS,
             min_std=0.03,
@@ -1728,7 +1716,7 @@ class ZbotWalkingTask(ksim.PPOTask[ZbotWalkingTaskConfig]):
 
             next_carry = jax.tree.map(
                 lambda x, y: jnp.where(transition.done, x, y),
-                self.get_initial_model_carry(rng),
+                self.get_initial_model_carry(model, rng),
                 (next_actor_carry, next_critic_carry),
             )
 
@@ -1738,7 +1726,7 @@ class ZbotWalkingTask(ksim.PPOTask[ZbotWalkingTaskConfig]):
 
         return ppo_variables, next_model_carry
 
-    def get_initial_model_carry(self, rng: PRNGKeyArray) -> tuple[Array, Array]:
+    def get_initial_model_carry(self, model, rng: PRNGKeyArray) -> tuple[Array, Array]:
         return (
             jnp.zeros(shape=(self.config.depth, self.config.hidden_size)),
             jnp.zeros(shape=(self.config.depth, self.config.hidden_size)),
@@ -1777,11 +1765,11 @@ if __name__ == "__main__":
     ZbotWalkingTask.launch(
         ZbotWalkingTaskConfig(
             # Training parameters.
-            num_envs=2048,
-            batch_size=256,
+            num_envs=16,  # Reduced from 2048 for CPU training
+            batch_size=8,  # Reduced from 256 for CPU training
             learning_rate=1e-3,
             num_passes=4,
-            epochs_per_log_step=1,
+            #epochs_per_log_step=1,
             rollout_length_seconds=8.0,
             # Simulation parameters.
             dt=0.001,
@@ -1791,7 +1779,7 @@ if __name__ == "__main__":
             # Checkpointing parameters.
             save_every_n_seconds=60,
             valid_every_n_steps=5,
-            render_full_every_n_seconds=10,
+            render_full_every_n_seconds=10,  # Enable rendering every 10 seconds
             render_azimuth=145.0,
             action_latency_range=(0.003, 0.10),
         ),
