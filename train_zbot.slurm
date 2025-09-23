@@ -37,12 +37,14 @@ source activate ${ENV_PATH}
 
 # Install dependencies
 pip install -r requirements.txt
-
-# Install JAX with CUDA 12 (if GPU node)
-pip install "jax[cuda12]"
+pip install 'jax[cuda12]'  # If using GPU machine, install JAX CUDA libraries
 
 echo "Installed dependencies:"
 pip freeze
+
+# Verify GPU backend
+echo "Checking JAX backend:"
+python -c "import jax; print(jax.default_backend())"  # Should print "gpu"
 
 # Run training (default run)
 python -m train
