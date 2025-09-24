@@ -46,7 +46,11 @@ pip freeze
 echo "Checking JAX backend:"
 python -c "import jax; print(jax.default_backend())"  # Should print "gpu"
 
-# Run training (will handle GUI automatically on headless system)
+# Set MuJoCo to use headless rendering backend (osmesa)
+export MUJOCO_GL=osmesa
+echo "Set MUJOCO_GL=osmesa for headless rendering"
+
+# Run training
 python -m train
 
 # Example: to load pretrained checkpoint and run in view mode, uncomment:
