@@ -1,7 +1,7 @@
 Running from directory: /cluster/work/sebasrb/zbot-policy-walking-fixed
 Job name: ksim-zbot-train
-Job ID: 23081066
-Node(s): idun-07-05
+Job ID: 23081913
+Node(s): idun-01-03
 Requirement already satisfied: ksim in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 4)) (0.2.10)
 Requirement already satisfied: xax in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 5)) (0.4.3)
 Requirement already satisfied: mujoco-scenes in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 6)) (0.0.16)
@@ -336,42 +336,50 @@ zipp==3.23.0
 Checking JAX backend:
 gpu
 Set MUJOCO_GL=osmesa for headless rendering
-  [1;36mINFO[0m  [90m2025-09-24 13:24:34[0m [[1;34mroot[0m] Single GPU detected, using default device selection
-  [1;36mINFO[0m  [90m2025-09-24 13:24:46[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX logging level to INFO
-  [1;36mINFO[0m  [90m2025-09-24 13:24:46[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX compilation cache directory to /cluster/home/sebasrb/.cache/jax/jaxcache
-  [1;36mINFO[0m  [90m2025-09-24 13:24:46[0m [[1;34mxax.task.mixins.compile[0m] Configuring JAX compilation cache parameters
- [1;32mSTATUS[0m [90m2025-09-24 13:24:46[0m [[1;34mxax.task.mixins.artifacts[0m] /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_006
- [1;32mSTATUS[0m [90m2025-09-24 13:24:46[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/zbot-policy-walking-fixed/train.py
+  [1;36mINFO[0m  [90m2025-09-24 14:03:48[0m [[1;34mroot[0m] Single GPU detected, using default device selection
+  [1;36mINFO[0m  [90m2025-09-24 14:03:59[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX logging level to INFO
+  [1;36mINFO[0m  [90m2025-09-24 14:03:59[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX compilation cache directory to /cluster/home/sebasrb/.cache/jax/jaxcache
+  [1;36mINFO[0m  [90m2025-09-24 14:03:59[0m [[1;34mxax.task.mixins.compile[0m] Configuring JAX compilation cache parameters
+ [1;32mSTATUS[0m [90m2025-09-24 14:03:59[0m [[1;34mxax.task.mixins.artifacts[0m] /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008
+ [1;32mSTATUS[0m [90m2025-09-24 14:03:59[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/zbot-policy-walking-fixed/train.py
 {"status": {"message": "/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py", "filename": "train.py", "lineno": 592}}
- [1;32mSTATUS[0m [90m2025-09-24 13:24:46[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_006
-{"status": {"message": "/cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_006", "filename": "train.py", "lineno": 593}}
-  [1;36mINFO[0m  [90m2025-09-24 13:24:47[0m [[1;34mjax._src.xla_bridge[0m] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
- [1;32mSTATUS[0m [90m2025-09-24 13:24:47[0m [[1;34mxax.task.mixins.train[0m] JAX devices: [CudaDevice(id=0)]
+ [1;32mSTATUS[0m [90m2025-09-24 14:03:59[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008
+{"status": {"message": "/cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008", "filename": "train.py", "lineno": 593}}
+  [1;36mINFO[0m  [90m2025-09-24 14:03:59[0m [[1;34mjax._src.xla_bridge[0m] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+ [1;32mSTATUS[0m [90m2025-09-24 14:03:59[0m [[1;34mxax.task.mixins.train[0m] JAX devices: [CudaDevice(id=0)]
 {"status": {"message": "JAX devices: [CudaDevice(id=0)]", "filename": "train.py", "lineno": 594}}
-  [1;36mINFO[0m  [90m2025-09-24 13:24:50[0m [[1;34mxax.task.mixins.train[0m] Starting a new training run
-  [1;35mPING[0m  [90m2025-09-24 13:24:53[0m [[1;34mksim.task.rl[0m] Model size: 1,095,597 parameters
+  [1;36mINFO[0m  [90m2025-09-24 14:04:05[0m [[1;34mxax.task.mixins.train[0m] Starting a new training run
+  [1;35mPING[0m  [90m2025-09-24 14:04:07[0m [[1;34mksim.task.rl[0m] Model size: 1,095,597 parameters
 {"ping": {"message": "Model size: 1,095,597 parameters", "filename": "rl.py", "lineno": 2389}}
-  [1;35mPING[0m  [90m2025-09-24 13:24:53[0m [[1;34mksim.task.rl[0m] Optimizer size: 2,191,194 parameters
+  [1;35mPING[0m  [90m2025-09-24 14:04:07[0m [[1;34mksim.task.rl[0m] Optimizer size: 2,191,194 parameters
 {"ping": {"message": "Optimizer size: 2,191,194 parameters", "filename": "rl.py", "lineno": 2390}}
-  [1;36mINFO[0m  [90m2025-09-24 13:24:53[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
-[1;33mWARNING[0m [90m2025-09-24 13:24:54[0m [[1;34mksim.engine[0m] `max_action_latency=0.100000` is greater than `ctrl_dt=0.020000`
+  [1;36mINFO[0m  [90m2025-09-24 14:04:07[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
+[1;33mWARNING[0m [90m2025-09-24 14:04:08[0m [[1;34mksim.engine[0m] `max_action_latency=0.100000` is greater than `ctrl_dt=0.020000`
 {"ping": {"message": "`max_action_latency=0.100000` is greater than `ctrl_dt=0.020000`", "filename": "engine.py", "lineno": 347}}
-  [1;36mINFO[0m  [90m2025-09-24 13:24:58[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
-Caught exception during training loop:
-
-  Traceback (most recent call last):
-    File "[36m/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py[0m", line 2561, in run_training
-      state, carry, metrics = self._rl_train_loop_step(
-                              [1;35m^^^^^^^^^^^^^^^^^^^^^^^^^[0m
-    File "[36m/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/xax/utils/jax.py[0m", line 139, in wrapped
-      res = jitted_fn(*args, **kwargs)
-            [1;35m^^^^^^^^^^^^^^^^^^^^^^^^^^[0m
-  jaxlib._jax.[1;31mXlaRuntimeError[0m: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 159413490792 bytes.
-  --------------------
-  For simplicity, JAX has removed its internal frames from the traceback of the following exception. Set JAX_TRACEBACK_FILTERING=off to include these.
-
-  [1;36mINFO[0m  [90m2025-09-24 13:48:49[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_006/checkpoints/ckpt.1.bin
-[36m┌────────────────────────────────────────────────────────────────────────────────────────────────────┐[0m
-[36m│[0m [1;96mExiting training job for /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_006[0m [36m│[0m
-[36m└────────────────────────────────────────────────────────────────────────────────────────────────────┘[0m
-Job finished
+  [1;36mINFO[0m  [90m2025-09-24 14:04:11[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
+{"state": {"num_steps": 2, "num_samples": 4096001, "start_time_s": 1758715392.0, "elapsed_time_s": 0.0, "phase": "valid"}, "train": {"advantages": -0.5442482829093933, "loss_kl": 4.846122465096414e-06, "loss_policy": 0.5421501398086548, "loss_value": 0.07453329116106033, "off_policy_log_probs": -1.1099830865859985, "off_policy_values": -0.8509385585784912, "on_policy_log_probs": -1.1097406148910522, "on_policy_values": -0.6276639699935913, "value_targets": -1.0438718795776367}, "reward": {"_total": -5.268690586090088, "ankle_knee_penalty": -2.8490453019003326e-07, "arm_pose_penalty": -0.28922608494758606, "contact_force_penalty": 0.0, "feet_airtime": -0.06687051802873611, "feet_orientation": 0.049921318888664246, "feet_too_close_penalty": -0.10757886618375778, "reachability_penalty": -5.620190620422363, "simple_single_foot_contact": 0.21187543869018555, "stay_alive": -0.01456154603511095, "straight_leg_penalty": -0.037800341844558716, "upright": 0.6057406067848206}, "termination": {"episode_length": 0.8189461827278137, "mean_terminations": 194.546875, "prct/episode_length": 0.0, "prct/not_upright": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0, "samples/second": 0.0, "dt": 1784.6207311153412}}
+ [1;32mSTATUS[0m [90m2025-09-24 14:34:00[0m [[1;34mroot[0m] Tensorboard: http://idun-01-03:9249/
+{"status": {"message": "Tensorboard: http://idun-01-03:9249/", "filename": "tensorboard.py", "lineno": 129}}
+ [1;32mSTATUS[0m [90m2025-09-24 14:35:30[0m [[1;34mksim.task.rl[0m] Step 1 time: 30m, 42s
+{"state": {"num_steps": 2, "num_samples": 4096001, "start_time_s": 1758715008.0, "elapsed_time_s": 0.0, "phase": "valid"}, "train": {"advantages": -0.5443522930145264, "loss_kl": 4.801612703886349e-06, "loss_policy": 0.5423021912574768, "loss_value": 0.07421891391277313, "off_policy_log_probs": -1.108288049697876, "off_policy_values": -0.8508583903312683, "on_policy_log_probs": -1.1080478429794312, "on_policy_values": -0.6269058585166931, "value_targets": -1.0436737537384033}, "reward": {"_total": -5.25502347946167, "ankle_knee_penalty": -2.8539278673633817e-07, "arm_pose_penalty": -0.29134321212768555, "contact_force_penalty": 0.0, "feet_airtime": -0.06492755562067032, "feet_orientation": 0.04975227639079094, "feet_too_close_penalty": -0.10457727313041687, "reachability_penalty": -5.610093116760254, "simple_single_foot_contact": 0.21254654228687286, "stay_alive": -0.014508530497550964, "straight_leg_penalty": -0.037810444831848145, "upright": 0.6059380769729614}, "termination": {"episode_length": 0.8207317590713501, "mean_terminations": 194.126953125, "prct/episode_length": 0.0, "prct/not_upright": 1.0000001192092896}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0, "samples/second": 0.0, "dt": 2363.99568939209}}
+ [1;32mSTATUS[0m [90m2025-09-24 14:36:38[0m [[1;34mroot[0m] Tensorboard: http://idun-07-05:9249/
+{"status": {"message": "Tensorboard: http://idun-07-05:9249/", "filename": "tensorboard.py", "lineno": 129}}
+ [1;32mSTATUS[0m [90m2025-09-24 14:38:41[0m [[1;34mksim.task.rl[0m] Step 1 time: 40m, 52s
+{"status": {"message": "Step 1 time: 30m, 42s", "filename": "rl.py", "lineno": 2591}}
+  [1;36mINFO[0m  [90m2025-09-24 14:48:32[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008/checkpoints/ckpt.3.bin
+{"state": {"num_steps": 3, "num_samples": 8192001, "start_time_s": 1758715392.0, "elapsed_time_s": 1842.6351318359375, "phase": "train"}, "gpu": {"mem/0": 75.72064395100479, "temp/0": 31.0, "util/0": 0.0}, "cpu": {"child_procs": 6, "percent": 97.9, "child_percent": 0.0}, "mem": {"percent": 1.0731644100666329, "shared": 593821696, "child_percent": 0.017765561203307346, "rss/cur": 23217528832, "rss/total": 25523638272, "vms/cur": 106715508736, "vms/total": 130756624384}, "train": {"advantages": -0.3344332277774811, "loss_kl": 6.1773644119966775e-06, "loss_policy": 0.3299560546875, "loss_value": 0.028063934296369553, "off_policy_log_probs": -1.0990508794784546, "off_policy_values": -0.9575764536857605, "on_policy_log_probs": -1.098742127418518, "on_policy_values": -0.8321310877799988, "value_targets": -1.0437010526657104}, "reward": {"_total": -5.178966522216797, "ankle_knee_penalty": -2.9031963322267984e-07, "arm_pose_penalty": -0.28117889165878296, "contact_force_penalty": 0.0, "feet_airtime": -0.06518042087554932, "feet_orientation": 0.050207484513521194, "feet_too_close_penalty": -0.10062134265899658, "reachability_penalty": -5.546881198883057, "simple_single_foot_contact": 0.21251776814460754, "stay_alive": -0.014969391748309135, "straight_leg_penalty": -0.03735595569014549, "upright": 0.604495644569397}, "termination": {"episode_length": 0.8078804016113281, "mean_terminations": 197.77734375, "prct/episode_length": 0.0, "prct/not_upright": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0, "samples/second": 0.0, "dt": 2673.3094527721405}}
+ [1;32mSTATUS[0m [90m2025-09-24 14:48:33[0m [[1;34mksim.task.rl[0m] Step 2 time: 13m, 2s
+{"status": {"message": "Step 1 time: 40m, 52s", "filename": "rl.py", "lineno": 2591}}
+  [1;36mINFO[0m  [90m2025-09-24 14:56:03[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_007/checkpoints/ckpt.3.bin
+{"state": {"num_steps": 3, "num_samples": 8192001, "start_time_s": 1758715008.0, "elapsed_time_s": 2452.982177734375, "phase": "train"}, "gpu": {"mem/0": 75.29052734375, "temp/0": 28.0, "util/0": 0.0}, "cpu": {"child_procs": 6, "percent": 98.3, "child_percent": 0.0}, "mem": {"percent": 1.1423243885660321, "shared": 584318976, "child_percent": 0.023775133373448123, "rss/cur": 18519363584, "rss/total": 20832018432, "vms/cur": 61034704896, "vms/total": 76516802560}, "train": {"advantages": -0.345115602016449, "loss_kl": 6.106748514866922e-06, "loss_policy": 0.34086287021636963, "loss_value": 0.02815999463200569, "off_policy_log_probs": -1.096530556678772, "off_policy_values": -0.9535636305809021, "on_policy_log_probs": -1.0962252616882324, "on_policy_values": -0.8221843242645264, "value_targets": -1.0424866676330566}, "reward": {"_total": -5.161417007446289, "ankle_knee_penalty": -2.903033475831762e-07, "arm_pose_penalty": -0.2831133008003235, "contact_force_penalty": 0.0, "feet_airtime": -0.06346377730369568, "feet_orientation": 0.04977218806743622, "feet_too_close_penalty": -0.09749878197908401, "reachability_penalty": -5.532163143157959, "simple_single_foot_contact": 0.2132222205400467, "stay_alive": -0.014871993102133274, "straight_leg_penalty": -0.03743693232536316, "upright": 0.6041362881660461}, "termination": {"episode_length": 0.81099534034729, "mean_terminations": 197.005859375, "prct/episode_length": 0.0, "prct/not_upright": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0, "samples/second": 0.0, "dt": 3540.1766867637634}}
+ [1;32mSTATUS[0m [90m2025-09-24 14:56:04[0m [[1;34mksim.task.rl[0m] Step 2 time: 17m, 22s
+{"status": {"message": "Step 2 time: 13m, 2s", "filename": "rl.py", "lineno": 2591}}
+  [1;36mINFO[0m  [90m2025-09-24 15:15:15[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008/checkpoints/ckpt.4.bin
+{"state": {"num_steps": 4, "num_samples": 12288001, "start_time_s": 1758715392.0, "elapsed_time_s": 2624.9453125, "phase": "valid"}, "gpu": {"mem/0": 75.72064395100479, "temp/0": 32.0, "util/0": 99.0}, "cpu": {"child_procs": 6, "percent": 91.7, "child_percent": 0.0}, "mem": {"percent": 0.9038960021026544, "shared": 593821696, "child_percent": 0.018361180739684933, "rss/cur": 19555467264, "rss/total": 21938892800, "vms/cur": 103021936640, "vms/total": 127140528128}, "train": {"advantages": -0.0994720607995987, "loss_kl": 7.882155841798522e-06, "loss_policy": 0.09176419675350189, "loss_value": 0.013309929519891739, "off_policy_log_probs": -1.0887389183044434, "off_policy_values": -0.9976392388343811, "on_policy_log_probs": -1.088344931602478, "on_policy_values": -0.9476003050804138, "value_targets": -1.0189841985702515}, "reward": {"_total": -5.093375205993652, "ankle_knee_penalty": -2.997768149270996e-07, "arm_pose_penalty": -0.269016832113266, "contact_force_penalty": 0.0, "feet_airtime": -0.06618554890155792, "feet_orientation": 0.051128387451171875, "feet_too_close_penalty": -0.0950755625963211, "reachability_penalty": -5.475258827209473, "simple_single_foot_contact": 0.21200881898403168, "stay_alive": -0.01590862311422825, "straight_leg_penalty": -0.036664072424173355, "upright": 0.6015971899032593}, "termination": {"episode_length": 0.7787144184112549, "mean_terminations": 205.216796875, "prct/episode_length": 0.0, "prct/not_upright": 0.9999999403953552}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0016050128410614953, "samples/second": 4930.599861729804, "dt": 2492.2466263771057}}
+ [1;32mSTATUS[0m [90m2025-09-24 15:16:54[0m [[1;34mksim.task.rl[0m] Step 3 time: 28m, 21s
+{"status": {"message": "Step 2 time: 17m, 22s", "filename": "rl.py", "lineno": 2591}}
+  [1;36mINFO[0m  [90m2025-09-24 15:33:17[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_007/checkpoints/ckpt.4.bin
+{"state": {"num_steps": 4, "num_samples": 12288001, "start_time_s": 1758715008.0, "elapsed_time_s": 3495.8720703125, "phase": "valid"}, "gpu": {"mem/0": 75.29052734375, "temp/0": 34.0, "util/0": 100.0}, "cpu": {"child_procs": 6, "percent": 93.1, "child_percent": 0.0}, "mem": {"percent": 1.1340262748437033, "shared": 584318976, "child_percent": 0.024465842784539737, "rss/cur": 18384834560, "rss/total": 20764676096, "vms/cur": 60896165888, "vms/total": 76445605888}, "train": {"advantages": -0.11836422234773636, "loss_kl": 7.616043149027973e-06, "loss_policy": 0.11130598932504654, "loss_value": 0.013492211699485779, "off_policy_log_probs": -1.0865886211395264, "off_policy_values": -0.9958146810531616, "on_policy_log_probs": -1.0862077474594116, "on_policy_values": -0.9280509352684021, "value_targets": -1.0212323665618896}, "reward": {"_total": -5.074006080627441, "ankle_knee_penalty": -3.0127344530228584e-07, "arm_pose_penalty": -0.2715388238430023, "contact_force_penalty": 0.0, "feet_airtime": -0.06268906593322754, "feet_orientation": 0.05033142492175102, "feet_too_close_penalty": -0.09015649557113647, "reachability_penalty": -5.463289737701416, "simple_single_foot_contact": 0.2133818119764328, "stay_alive": -0.01565612480044365, "straight_leg_penalty": -0.03701873868703842, "upright": 0.6026300191879272}, "termination": {"episode_length": 0.7863403558731079, "mean_terminations": 203.216796875, "prct/episode_length": 0.0, "prct/not_upright": 0.9999999403953552}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0011729804048042952, "samples/second": 3603.396103102189, "dt": 3410.1402537822723}}
+ [1;32mSTATUS[0m [90m2025-09-24 15:35:25[0m [[1;34mksim.task.rl[0m] Step 3 time: 39m, 21s
+{"status": {"message": "Step 3 time: 28m, 21s", "filename": "rl.py", "lineno": 2591}}
+  [1;36mINFO[0m  [90m2025-09-24 15:42:46[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008/checkpoints/ckpt.5.bin
