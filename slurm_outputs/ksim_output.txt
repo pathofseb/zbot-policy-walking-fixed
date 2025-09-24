@@ -1,6 +1,6 @@
 Running from directory: /cluster/work/sebasrb/zbot-policy-walking-fixed
 Job name: ksim-zbot-train
-Job ID: 23080178
+Job ID: 23080279
 Node(s): idun-09-10
 Requirement already satisfied: ksim in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 4)) (0.2.10)
 Requirement already satisfied: xax in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 5)) (0.4.3)
@@ -335,4 +335,48 @@ yarl==1.20.1
 zipp==3.23.0
 Checking JAX backend:
 gpu
+[31m┌────────────────────────────────────────────────────────────────────────────┐[0m
+[31m│[0m [1;91mNo config file was found in /cluster/home/sebasrb/.xax.yml; writing one...[0m [31m│[0m
+[31m└────────────────────────────────────────────────────────────────────────────┘[0m
+  [1;36mINFO[0m  [90m2025-09-24 11:53:51[0m [[1;34mroot[0m] Single GPU detected, using default device selection
+  [1;36mINFO[0m  [90m2025-09-24 11:54:06[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX logging level to INFO
+  [1;36mINFO[0m  [90m2025-09-24 11:54:06[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX compilation cache directory to /cluster/home/sebasrb/.cache/jax/jaxcache
+  [1;36mINFO[0m  [90m2025-09-24 11:54:06[0m [[1;34mxax.task.mixins.compile[0m] Configuring JAX compilation cache parameters
+ [1;32mSTATUS[0m [90m2025-09-24 11:54:06[0m [[1;34mxax.task.mixins.artifacts[0m] /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_000
+ [1;32mSTATUS[0m [90m2025-09-24 11:54:06[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/zbot-policy-walking-fixed/train.py
+{"status": {"message": "/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py", "filename": "train.py", "lineno": 592}}
+ [1;32mSTATUS[0m [90m2025-09-24 11:54:06[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_000
+{"status": {"message": "/cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_000", "filename": "train.py", "lineno": 593}}
+[1;33mWARNING[0m [90m2025-09-24 11:54:06[0m [[1;34mpy.warnings[0m] /cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/kscale/conf.py:44: UserWarning: Settings directory does not exist: /cluster/home/sebasrb/.kscale. Creating it now.
+  warnings.warn(f"Settings directory does not exist: {dir_path}. Creating it now.")
+
+{"ping": {"message": "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/kscale/conf.py:44: UserWarning: Settings directory does not exist: /cluster/home/sebasrb/.kscale. Creating it now.\n  warnings.warn(f\"Settings directory does not exist: {dir_path}. Creating it now.\")\n", "filename": "warnings.py", "lineno": 110}}
+  [1;36mINFO[0m  [90m2025-09-24 11:54:07[0m [[1;34mjax._src.xla_bridge[0m] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+ [1;32mSTATUS[0m [90m2025-09-24 11:54:07[0m [[1;34mxax.task.mixins.train[0m] JAX devices: [CudaDevice(id=0)]
+{"status": {"message": "JAX devices: [CudaDevice(id=0)]", "filename": "train.py", "lineno": 594}}
+  [1;36mINFO[0m  [90m2025-09-24 11:54:08[0m [[1;34mhttpx[0m] HTTP Request: GET https://api.kscale.dev/robots/urdf/zbot "HTTP/1.1 200 OK"
+  [1;36mINFO[0m  [90m2025-09-24 11:54:08[0m [[1;34mkscale.web.clients.robot_class[0m] Downloading URDF file from https://kscale-www-production.s3.amazonaws.com/urdfs/61462840e07468d2/robot.tgz?AWSAccessKeyId=ASIA2R4HRCAHQ7DYZT2F&Signature=STJ%2B89yLc84J1uuUxY74%2FU9gmN4%3D&x-amz-security-token=IQoJb3JpZ2luX2VjENL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCICk3jQ4dHVGHPe%2BEx7zHtHlQ5m%2FaN80gJL1CILC7ASukAiBEvUmysPFQuDJNJ%2FOuHKcEbNYG70u7ywE26SlpKJ6yCCrhAghbEAAaDDcyNTU5NjgzNTg1NSIM0P3udGGWq2fiXazXKr4C3C%2FFcsSYcKrTzmPYSzlmdKAKSJRWq9QSccicJOKqnt7R645TLxge9nEty0Z86%2Fc1NdpxzlqYMFZ8y81HqHLswXULzA1vTofTp07X6XD33oaLqzuK%2F3IEnXfcBukpu18pkLJ%2BqGIokulCJuZeKRwNlKcnB%2Fw0qSN3twPwst%2FoaYI3h440a401ifIn%2FdRUr9DNrJZSXmYLq0b2gGgsQB6h8%2BjifRn0tST6kA4kRBvgTUlpS%2FfTYlecsAS3Xk%2BGFN%2BzwFwsXl1YviHIqUYpjsQtITeFuu2uCLJvHbLD3LiSDHygMvOpFoyas4%2FLljKzUjlcfiRT2UClIX8br56BDFsJx011mZ%2FFSS24cRglEaYzidIFg11zIhSzFIvAkLyGAMkumTgvJzdXncSIQUvMk4DkXECMw2%2FU4yEakNfA1SoQMJb%2FzsYGOpABHJfiUALimlLG%2FHZhQ%2Bfj5BGaYsK83PFGTkzlRHw1wYTb89LPyvyVzODoetEQ6NtAiDjPE7iYl0MigVcwtFfus2zE8uKfqUMSmcptisLs7hIyGnGS3lx9gNnAlSoZygPXWkVzBFqPk%2BsLLKdOqQn2RFTovNch4MA7SKdDIlS0%2FWlNh1XzXQFGDWw1FclDKUSn&Expires=1758711248
+  [1;36mINFO[0m  [90m2025-09-24 11:54:09[0m [[1;34mhttpx[0m] HTTP Request: GET https://kscale-www-production.s3.amazonaws.com/urdfs/61462840e07468d2/robot.tgz?AWSAccessKeyId=ASIA2R4HRCAHQ7DYZT2F&Signature=STJ%2B89yLc84J1uuUxY74%2FU9gmN4%3D&x-amz-security-token=IQoJb3JpZ2luX2VjENL%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaCXVzLWVhc3QtMSJGMEQCICk3jQ4dHVGHPe%2BEx7zHtHlQ5m%2FaN80gJL1CILC7ASukAiBEvUmysPFQuDJNJ%2FOuHKcEbNYG70u7ywE26SlpKJ6yCCrhAghbEAAaDDcyNTU5NjgzNTg1NSIM0P3udGGWq2fiXazXKr4C3C%2FFcsSYcKrTzmPYSzlmdKAKSJRWq9QSccicJOKqnt7R645TLxge9nEty0Z86%2Fc1NdpxzlqYMFZ8y81HqHLswXULzA1vTofTp07X6XD33oaLqzuK%2F3IEnXfcBukpu18pkLJ%2BqGIokulCJuZeKRwNlKcnB%2Fw0qSN3twPwst%2FoaYI3h440a401ifIn%2FdRUr9DNrJZSXmYLq0b2gGgsQB6h8%2BjifRn0tST6kA4kRBvgTUlpS%2FfTYlecsAS3Xk%2BGFN%2BzwFwsXl1YviHIqUYpjsQtITeFuu2uCLJvHbLD3LiSDHygMvOpFoyas4%2FLljKzUjlcfiRT2UClIX8br56BDFsJx011mZ%2FFSS24cRglEaYzidIFg11zIhSzFIvAkLyGAMkumTgvJzdXncSIQUvMk4DkXECMw2%2FU4yEakNfA1SoQMJb%2FzsYGOpABHJfiUALimlLG%2FHZhQ%2Bfj5BGaYsK83PFGTkzlRHw1wYTb89LPyvyVzODoetEQ6NtAiDjPE7iYl0MigVcwtFfus2zE8uKfqUMSmcptisLs7hIyGnGS3lx9gNnAlSoZygPXWkVzBFqPk%2BsLLKdOqQn2RFTovNch4MA7SKdDIlS0%2FWlNh1XzXQFGDWw1FclDKUSn&Expires=1758711248 "HTTP/1.1 200 OK"
+  [1;36mINFO[0m  [90m2025-09-24 11:54:10[0m [[1;34mkscale.web.clients.robot_class[0m] Checking MD5 hash of downloaded file
+  [1;36mINFO[0m  [90m2025-09-24 11:54:10[0m [[1;34mkscale.web.clients.robot_class[0m] Updating downloaded file information
+  [1;36mINFO[0m  [90m2025-09-24 11:54:10[0m [[1;34mkscale.web.clients.robot_class[0m] Unpacking URDF file
+  [1;36mINFO[0m  [90m2025-09-24 11:54:10[0m [[1;34mkscale.web.clients.robot_class[0m] Updating downloaded file information
+  [1;36mINFO[0m  [90m2025-09-24 11:54:11[0m [[1;34mhttpx[0m] HTTP Request: GET https://api.kscale.dev/robots/name/zbot "HTTP/1.1 200 OK"
+  [1;36mINFO[0m  [90m2025-09-24 11:54:12[0m [[1;34mxax.task.mixins.train[0m] Starting a new training run
+  [1;35mPING[0m  [90m2025-09-24 11:54:15[0m [[1;34mksim.task.rl[0m] Model size: 1,095,597 parameters
+{"ping": {"message": "Model size: 1,095,597 parameters", "filename": "rl.py", "lineno": 2389}}
+  [1;35mPING[0m  [90m2025-09-24 11:54:15[0m [[1;34mksim.task.rl[0m] Optimizer size: 2,191,194 parameters
+{"ping": {"message": "Optimizer size: 2,191,194 parameters", "filename": "rl.py", "lineno": 2390}}
+  [1;36mINFO[0m  [90m2025-09-24 11:54:15[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
+[1;33mWARNING[0m [90m2025-09-24 11:54:17[0m [[1;34mksim.engine[0m] `max_action_latency=0.100000` is greater than `ctrl_dt=0.020000`
+{"ping": {"message": "`max_action_latency=0.100000` is greater than `ctrl_dt=0.020000`", "filename": "engine.py", "lineno": 347}}
+  [1;36mINFO[0m  [90m2025-09-24 11:54:22[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
+[1;33mWARNING[0m [90m2025-09-24 11:55:13[0m [[1;34mpy.warnings[0m] /cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'Failed to detect any supported platform'
+  warnings.warn(message, GLFWError)
+
+{"ping": {"message": "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/glfw/__init__.py:917: GLFWError: (65550) b'Failed to detect any supported platform'\n  warnings.warn(message, GLFWError)\n", "filename": "warnings.py", "lineno": 110}}
+[1;33mWARNING[0m [90m2025-09-24 11:55:13[0m [[1;34mpy.warnings[0m] /cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/glfw/__init__.py:917: GLFWError: (65537) b'The GLFW library is not initialized'
+  warnings.warn(message, GLFWError)
+
+{"ping": {"message": "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/glfw/__init__.py:917: GLFWError: (65537) b'The GLFW library is not initialized'\n  warnings.warn(message, GLFWError)\n", "filename": "warnings.py", "lineno": 110}}
 Job finished

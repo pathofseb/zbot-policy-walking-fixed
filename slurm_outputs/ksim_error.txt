@@ -1,11 +1,11 @@
-2025-09-24 11:42:46.971623: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-09-24 11:53:33.893509: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1758706967.082929 1090744 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1758706967.125747 1090744 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1758706967.349441 1090744 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1758706967.349489 1090744 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1758706967.349504 1090744 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1758706967.349516 1090744 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+E0000 00:00:1758707613.917121 1091822 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1758707613.925203 1091822 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1758707613.947039 1091822 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758707613.947086 1091822 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758707613.947101 1091822 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758707613.947113 1091822 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
 /cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:888: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
   num_inputs: int = eqx.static_field()
 /cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:889: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
@@ -18,7 +18,56 @@ W0000 00:00:1758706967.349516 1090744 computation_placer.cc:177] computation pla
   max_std: float = eqx.static_field()
 /cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:893: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
   var_scale: float = eqx.static_field()
+2025-09-24 11:53:52.523976: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1758707632.548115 1091831 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1758707632.556348 1091831 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1758707632.578409 1091831 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758707632.578453 1091831 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758707632.578468 1091831 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758707632.578480 1091831 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:888: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:889: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_outputs: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:890: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_mixtures: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:891: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  min_std: float = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:892: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  max_std: float = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:893: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  var_scale: float = eqx.static_field()
+2025-09-24 11:54:07.207684: I external/xla/xla/pjrt/pjrt_api.cc:118] GetPjrtApi was found for cuda at /cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/jax_plugins/xla_cuda12/xla_cuda_plugin.so
+2025-09-24 11:54:07.208275: I external/xla/xla/pjrt/pjrt_api.cc:96] PJRT_Api is set for device type cuda
+INFO:2025-09-24 11:54:07,215:jax._src.xla_bridge:822: Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+2025-09-24 11:54:07.216096: I external/xla/xla/pjrt/pjrt_api.cc:167] The PJRT plugin has PJRT API version 0.75. The framework PJRT API version is 0.75.
+2025-09-24 11:54:07.414411: I external/xla/xla/service/service.cc:163] XLA service 0x14cea906e170 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2025-09-24 11:54:07.414482: I external/xla/xla/service/service.cc:171]   StreamExecutor device (0): Tesla P100-PCIE-16GB, Compute Capability 6.0
+2025-09-24 11:54:07.422381: I external/xla/xla/stream_executor/cuda/cuda_dnn.cc:473] Loaded cuDNN version 91300
+2025-09-24 11:54:07.422764: I external/xla/xla/pjrt/pjrt_c_api_client.cc:133] PjRtCApiClient created.
+2025-09-24 11:55:04.428704: I external/xla/xla/stream_executor/cuda/subprocess_compilation.cc:349] ptxas warning : Registers are spilled to local memory in function 'loop_add_transpose_fusion_1', 4 bytes spill stores, 4 bytes spill loads
+
 Traceback (most recent call last):
-  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py", line 1766, in <module>
-    ZbotWalkingTaskConfig(
-TypeError: ZbotWalkingTaskConfig.__init__() got an unexpected keyword argument 'render_full_every_n_seconds'
+  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py", line 1765, in <module>
+    ZbotWalkingTask.launch(
+  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/xax/task/mixins/runnable.py", line 50, in launch
+    launcher.launch(cls, *cfgs, use_cli=use_cli)
+  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/xax/task/launchers/cli.py", line 40, in launch
+    SingleProcessLauncher().launch(task, *cfgs, use_cli=use_cli_next)
+  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 141, in launch
+    run_single_process_training(task, *cfgs, use_cli=use_cli, logger=logger)
+  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 129, in run_single_process_training
+    task_obj.run()
+  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 1210, in run
+    self.run_training()
+  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 2493, in run_training
+    viewer = get_default_viewer(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 635, in get_default_viewer
+    viewer = DefaultMujocoViewer(
+             ^^^^^^^^^^^^^^^^^^^^
+  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/kmv/app/viewer.py", line 333, in __init__
+    self.ctx = mujoco.MjrContext(model, mujoco.mjtFontScale.mjFONTSCALE_150.value)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+mujoco.FatalError: gladLoadGL error
