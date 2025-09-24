@@ -4,8 +4,9 @@
 #SBATCH --time=06:00:00
 #SBATCH --partition=GPUQ
 #SBATCH --gres=gpu:1
-#SBATCH --mem=32GB
+#SBATCH --mem=40GB
 #SBATCH --nodes=1
+#SBATCH --constraint="(a100|h100|h200)&(gpu40g|gpu80g)"
 #SBATCH --output=slurm_outputs/ksim_output.txt
 #SBATCH --error=slurm_outputs/ksim_error.txt
 #SBATCH --mail-user=sebasrb@ntnu.no
