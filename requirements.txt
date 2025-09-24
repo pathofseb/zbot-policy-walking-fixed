@@ -4,6 +4,7 @@
 ksim
 xax
 mujoco-scenes
+distrax
 
 # Inference dependencies
 kinfer[jax]
