@@ -5,6 +5,7 @@ ksim
 xax
 mujoco-scenes
 distrax
+warp-lang
 
 # Inference dependencies
 kinfer[jax]
