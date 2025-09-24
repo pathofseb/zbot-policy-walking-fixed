@@ -1,11 +1,11 @@
-2025-09-24 12:25:08.875777: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-09-24 12:31:38.915646: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1758709508.899128 2274071 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1758709508.907179 2274071 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1758709508.928994 2274071 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1758709508.929039 2274071 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1758709508.929056 2274071 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1758709508.929070 2274071 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+E0000 00:00:1758709898.940024 2275245 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1758709898.948126 2275245 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1758709898.970324 2275245 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758709898.970394 2275245 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758709898.970413 2275245 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758709898.970428 2275245 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
 /cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:888: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
   num_inputs: int = eqx.static_field()
 /cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:889: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
@@ -18,14 +18,14 @@ W0000 00:00:1758709508.929070 2274071 computation_placer.cc:177] computation pla
   max_std: float = eqx.static_field()
 /cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:893: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
   var_scale: float = eqx.static_field()
-2025-09-24 12:25:23.938986: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-09-24 12:31:54.180731: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
 WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
-E0000 00:00:1758709523.962296 2274082 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
-E0000 00:00:1758709523.970313 2274082 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
-W0000 00:00:1758709523.991912 2274082 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1758709523.991956 2274082 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1758709523.991973 2274082 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
-W0000 00:00:1758709523.991987 2274082 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+E0000 00:00:1758709914.204322 2275252 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1758709914.212316 2275252 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1758709914.234057 2275252 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758709914.234103 2275252 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758709914.234120 2275252 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758709914.234134 2275252 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
 /cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:888: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
   num_inputs: int = eqx.static_field()
 /cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:889: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
@@ -38,36 +38,1007 @@ W0000 00:00:1758709523.991987 2274082 computation_placer.cc:177] computation pla
   max_std: float = eqx.static_field()
 /cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:893: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
   var_scale: float = eqx.static_field()
-2025-09-24 12:25:38.088762: I external/xla/xla/pjrt/pjrt_api.cc:118] GetPjrtApi was found for cuda at /cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/jax_plugins/xla_cuda12/xla_cuda_plugin.so
-2025-09-24 12:25:38.089395: I external/xla/xla/pjrt/pjrt_api.cc:96] PJRT_Api is set for device type cuda
-INFO:2025-09-24 12:25:38,094:jax._src.xla_bridge:822: Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
-2025-09-24 12:25:38.094558: I external/xla/xla/pjrt/pjrt_api.cc:167] The PJRT plugin has PJRT API version 0.75. The framework PJRT API version is 0.75.
-2025-09-24 12:25:38.471274: I external/xla/xla/service/service.cc:163] XLA service 0x1518c90867c0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
-2025-09-24 12:25:38.471388: I external/xla/xla/service/service.cc:171]   StreamExecutor device (0): Tesla P100-PCIE-16GB, Compute Capability 6.0
-2025-09-24 12:25:38.478033: I external/xla/xla/stream_executor/cuda/cuda_dnn.cc:473] Loaded cuDNN version 91300
-2025-09-24 12:25:38.478419: I external/xla/xla/pjrt/pjrt_c_api_client.cc:133] PjRtCApiClient created.
-Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py", line 1765, in <module>
-    ZbotWalkingTask.launch(
-  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/xax/task/mixins/runnable.py", line 50, in launch
-    launcher.launch(cls, *cfgs, use_cli=use_cli)
-  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/xax/task/launchers/cli.py", line 40, in launch
-    SingleProcessLauncher().launch(task, *cfgs, use_cli=use_cli_next)
-  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 141, in launch
-    run_single_process_training(task, *cfgs, use_cli=use_cli, logger=logger)
-  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/xax/task/launchers/single_process.py", line 129, in run_single_process_training
-    task_obj.run()
-  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 1210, in run
-    self.run_training()
-  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 2493, in run_training
-    viewer = get_default_viewer(
-             ^^^^^^^^^^^^^^^^^^^
-  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/ksim/task/rl.py", line 635, in get_default_viewer
-    viewer = DefaultMujocoViewer(
-             ^^^^^^^^^^^^^^^^^^^^
-  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/kmv/app/viewer.py", line 333, in __init__
-    self.ctx = mujoco.MjrContext(model, mujoco.mjtFontScale.mjFONTSCALE_150.value)
-               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-mujoco.FatalError: gladLoadGL error
+2025-09-24 12:32:08.442961: I external/xla/xla/pjrt/pjrt_api.cc:118] GetPjrtApi was found for cuda at /cluster/work/sebasrb/zbot-policy-walking-fixed/ksim-env/lib/python3.11/site-packages/jax_plugins/xla_cuda12/xla_cuda_plugin.so
+2025-09-24 12:32:08.443584: I external/xla/xla/pjrt/pjrt_api.cc:96] PJRT_Api is set for device type cuda
+INFO:2025-09-24 12:32:08,454:jax._src.xla_bridge:822: Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+2025-09-24 12:32:08.455302: I external/xla/xla/pjrt/pjrt_api.cc:167] The PJRT plugin has PJRT API version 0.75. The framework PJRT API version is 0.75.
+2025-09-24 12:32:08.828000: I external/xla/xla/service/service.cc:163] XLA service 0x14bf0d0863a0 initialized for platform CUDA (this does not guarantee that XLA will be used). Devices:
+2025-09-24 12:32:08.828102: I external/xla/xla/service/service.cc:171]   StreamExecutor device (0): Tesla P100-PCIE-16GB, Compute Capability 6.0
+2025-09-24 12:32:08.835159: I external/xla/xla/stream_executor/cuda/cuda_dnn.cc:473] Loaded cuDNN version 91300
+2025-09-24 12:32:08.835550: I external/xla/xla/pjrt/pjrt_c_api_client.cc:133] PjRtCApiClient created.
+2025-09-24 12:32:29.198137: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2025-09-24 12:32:29.207386: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1758709949.265489 2275303 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1758709949.268442 2275302 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1758709949.305166 2275302 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+E0000 00:00:1758709949.313698 2275303 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1758709949.360842 2275302 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758709949.360899 2275302 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758709949.360917 2275302 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758709949.360932 2275302 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758709949.367278 2275303 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758709949.367344 2275303 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758709949.367361 2275303 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758709949.367375 2275303 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+2025-09-24 12:32:29.385248: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+2025-09-24 12:32:29.386466: I tensorflow/core/platform/cpu_feature_guard.cc:210] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:888: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:889: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_outputs: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:890: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_mixtures: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:891: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  min_std: float = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:892: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  max_std: float = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:893: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  var_scale: float = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:888: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:889: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_outputs: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:890: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_mixtures: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:891: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  min_std: float = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:892: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  max_std: float = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:893: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  var_scale: float = eqx.static_field()
+2025-09-24 12:34:40.884428: I external/xla/xla/stream_executor/cuda/subprocess_compilation.cc:349] ptxas warning : Registers are spilled to local memory in function 'loop_gather_select_fusion_2', 8 bytes spill stores, 8 bytes spill loads
+
+2025-09-24 12:58:55.548436: W external/xla/xla/hlo/transforms/simplifiers/hlo_rematerialization.cc:3183] Can't reduce memory use below 11.23GiB (12059160331 bytes) by rematerialization; only reduced to 148.56GiB (159511746983 bytes), down from 148.56GiB (159515838283 bytes) originally
+2025-09-24 13:00:29.644280: W external/xla/xla/tsl/framework/bfc_allocator.cc:501] Allocator (GPU_0_bfc) ran out of memory trying to allocate 148.47GiB (rounded to 159414737408)requested by op 
+If the cause is memory fragmentation maybe the environment variable 'TF_GPU_ALLOCATOR=cuda_malloc_async' will improve the situation. 
+Current allocation summary follows.
+Current allocation summary follows.
+2025-09-24 13:00:29.644439: I external/xla/xla/tsl/framework/bfc_allocator.cc:1049] BFCAllocator dump for GPU_0_bfc
+2025-09-24 13:00:29.644473: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (256): 	Total Chunks: 315, Chunks in use: 315. 78.8KiB allocated for chunks. 78.8KiB in use in bin. 15.0KiB client-requested in use in bin.
+2025-09-24 13:00:29.644497: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (512): 	Total Chunks: 147, Chunks in use: 147. 78.8KiB allocated for chunks. 78.8KiB in use in bin. 62.6KiB client-requested in use in bin.
+2025-09-24 13:00:29.644518: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (1024): 	Total Chunks: 48, Chunks in use: 48. 65.2KiB allocated for chunks. 65.2KiB in use in bin. 62.6KiB client-requested in use in bin.
+2025-09-24 13:00:29.644539: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (2048): 	Total Chunks: 10, Chunks in use: 10. 25.5KiB allocated for chunks. 25.5KiB in use in bin. 24.6KiB client-requested in use in bin.
+2025-09-24 13:00:29.644559: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (4096): 	Total Chunks: 2, Chunks in use: 2. 15.0KiB allocated for chunks. 15.0KiB in use in bin. 14.6KiB client-requested in use in bin.
+2025-09-24 13:00:29.644580: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (8192): 	Total Chunks: 12, Chunks in use: 12. 111.2KiB allocated for chunks. 111.2KiB in use in bin. 91.4KiB client-requested in use in bin.
+2025-09-24 13:00:29.644600: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (16384): 	Total Chunks: 45, Chunks in use: 45. 1.33MiB allocated for chunks. 1.33MiB in use in bin. 1.33MiB client-requested in use in bin.
+2025-09-24 13:00:29.644619: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (32768): 	Total Chunks: 42, Chunks in use: 42. 2.51MiB allocated for chunks. 2.51MiB in use in bin. 2.51MiB client-requested in use in bin.
+2025-09-24 13:00:29.644639: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (65536): 	Total Chunks: 37, Chunks in use: 37. 3.46MiB allocated for chunks. 3.46MiB in use in bin. 3.43MiB client-requested in use in bin.
+2025-09-24 13:00:29.644660: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (131072): 	Total Chunks: 103, Chunks in use: 103. 19.00MiB allocated for chunks. 19.00MiB in use in bin. 18.91MiB client-requested in use in bin.
+2025-09-24 13:00:29.644679: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (262144): 	Total Chunks: 9, Chunks in use: 8. 3.31MiB allocated for chunks. 2.94MiB in use in bin. 2.70MiB client-requested in use in bin.
+2025-09-24 13:00:29.644700: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (524288): 	Total Chunks: 38, Chunks in use: 38. 24.24MiB allocated for chunks. 24.24MiB in use in bin. 24.17MiB client-requested in use in bin.
+2025-09-24 13:00:29.644720: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (1048576): 	Total Chunks: 10, Chunks in use: 10. 13.77MiB allocated for chunks. 13.77MiB in use in bin. 13.77MiB client-requested in use in bin.
+2025-09-24 13:00:29.644740: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (2097152): 	Total Chunks: 8, Chunks in use: 7. 21.73MiB allocated for chunks. 17.76MiB in use in bin. 17.56MiB client-requested in use in bin.
+2025-09-24 13:00:29.644761: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (4194304): 	Total Chunks: 10, Chunks in use: 10. 54.29MiB allocated for chunks. 54.29MiB in use in bin. 54.29MiB client-requested in use in bin.
+2025-09-24 13:00:29.644782: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (8388608): 	Total Chunks: 1, Chunks in use: 1. 14.62MiB allocated for chunks. 14.62MiB in use in bin. 14.62MiB client-requested in use in bin.
+2025-09-24 13:00:29.644823: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (16777216): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-09-24 13:00:29.644845: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (33554432): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-09-24 13:00:29.644863: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (67108864): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-09-24 13:00:29.644881: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (134217728): 	Total Chunks: 0, Chunks in use: 0. 0B allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-09-24 13:00:29.644901: I external/xla/xla/tsl/framework/bfc_allocator.cc:1056] Bin (268435456): 	Total Chunks: 1, Chunks in use: 0. 11.76GiB allocated for chunks. 0B in use in bin. 0B client-requested in use in bin.
+2025-09-24 13:00:29.644936: I external/xla/xla/tsl/framework/bfc_allocator.cc:1072] Bin for 148.47GiB was 256.00MiB, Chunk State: 
+2025-09-24 13:00:29.644961: I external/xla/xla/tsl/framework/bfc_allocator.cc:1078]   Size: 11.76GiB | Requested Size: 16.16MiB | in_use: 0 | bin_num: 20, prev:   Size: 4.58MiB | Requested Size: 4.58MiB | in_use: 1 | bin_num: -1
+2025-09-24 13:00:29.644979: I external/xla/xla/tsl/framework/bfc_allocator.cc:1085] Next region of size 12794658816
+2025-09-24 13:00:29.645002: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10000000 of size 256 next 1
+2025-09-24 13:00:29.645020: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10000100 of size 256 next 7
+2025-09-24 13:00:29.645036: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10000200 of size 256 next 3
+2025-09-24 13:00:29.645052: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10000300 of size 256 next 221
+2025-09-24 13:00:29.645068: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10000400 of size 256 next 5
+2025-09-24 13:00:29.645084: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10000500 of size 768 next 8
+2025-09-24 13:00:29.645102: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10000800 of size 25600 next 9
+2025-09-24 13:00:29.645119: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10006c00 of size 512 next 10
+2025-09-24 13:00:29.645134: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10006e00 of size 768 next 13
+2025-09-24 13:00:29.645150: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10007100 of size 196608 next 14
+2025-09-24 13:00:29.645167: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10037100 of size 196608 next 15
+2025-09-24 13:00:29.645183: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10067100 of size 1536 next 16
+2025-09-24 13:00:29.645199: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10067700 of size 512 next 17
+2025-09-24 13:00:29.645214: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10067900 of size 196608 next 18
+2025-09-24 13:00:29.645230: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10097900 of size 196608 next 19
+2025-09-24 13:00:29.645246: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb100c7900 of size 1536 next 20
+2025-09-24 13:00:29.645261: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb100c7f00 of size 512 next 21
+2025-09-24 13:00:29.645277: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb100c8100 of size 196608 next 22
+2025-09-24 13:00:29.645303: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb100f8100 of size 196608 next 23
+2025-09-24 13:00:29.645331: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10128100 of size 1536 next 24
+2025-09-24 13:00:29.645349: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10128700 of size 512 next 25
+2025-09-24 13:00:29.645365: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10128900 of size 196608 next 26
+2025-09-24 13:00:29.645381: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10158900 of size 196608 next 27
+2025-09-24 13:00:29.645397: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10188900 of size 1536 next 28
+2025-09-24 13:00:29.645413: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10188f00 of size 512 next 29
+2025-09-24 13:00:29.645428: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10189100 of size 196608 next 30
+2025-09-24 13:00:29.645444: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb101b9100 of size 196608 next 31
+2025-09-24 13:00:29.645460: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb101e9100 of size 1536 next 32
+2025-09-24 13:00:29.645476: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb101e9700 of size 512 next 33
+2025-09-24 13:00:29.645492: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb101e9900 of size 153600 next 2
+2025-09-24 13:00:29.645508: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1020f100 of size 1280 next 34
+2025-09-24 13:00:29.645524: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1020f600 of size 247808 next 12
+2025-09-24 13:00:29.645540: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1024be00 of size 256 next 11
+2025-09-24 13:00:29.645556: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1024bf00 of size 512 next 37
+2025-09-24 13:00:29.645572: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1024c100 of size 196608 next 38
+2025-09-24 13:00:29.645588: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1027c100 of size 196608 next 39
+2025-09-24 13:00:29.645604: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb102ac100 of size 1536 next 40
+2025-09-24 13:00:29.645620: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb102ac700 of size 512 next 41
+2025-09-24 13:00:29.645635: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb102ac900 of size 196608 next 42
+2025-09-24 13:00:29.645651: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb102dc900 of size 196608 next 43
+2025-09-24 13:00:29.645667: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1030c900 of size 1536 next 44
+2025-09-24 13:00:29.645683: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1030cf00 of size 512 next 45
+2025-09-24 13:00:29.645699: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1030d100 of size 196608 next 46
+2025-09-24 13:00:29.645714: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1033d100 of size 196608 next 47
+2025-09-24 13:00:29.645730: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1036d100 of size 1536 next 48
+2025-09-24 13:00:29.645746: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1036d700 of size 512 next 49
+2025-09-24 13:00:29.645762: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1036d900 of size 196608 next 50
+2025-09-24 13:00:29.645778: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1039d900 of size 196608 next 51
+2025-09-24 13:00:29.645793: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb103cd900 of size 1536 next 52
+2025-09-24 13:00:29.645809: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb103cdf00 of size 512 next 53
+2025-09-24 13:00:29.645825: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb103ce100 of size 196608 next 54
+2025-09-24 13:00:29.645848: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb103fe100 of size 196608 next 55
+2025-09-24 13:00:29.645866: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1042e100 of size 1536 next 56
+2025-09-24 13:00:29.645882: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1042e700 of size 512 next 57
+2025-09-24 13:00:29.645898: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1042e900 of size 256 next 6
+2025-09-24 13:00:29.645914: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1042ea00 of size 25600 next 35
+2025-09-24 13:00:29.645930: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10434e00 of size 196608 next 36
+2025-09-24 13:00:29.645946: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10464e00 of size 196608 next 58
+2025-09-24 13:00:29.645961: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10494e00 of size 1536 next 59
+2025-09-24 13:00:29.645977: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10495400 of size 512 next 60
+2025-09-24 13:00:29.645993: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10495600 of size 196608 next 61
+2025-09-24 13:00:29.646009: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb104c5600 of size 196608 next 62
+2025-09-24 13:00:29.646025: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb104f5600 of size 1536 next 63
+2025-09-24 13:00:29.646041: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb104f5c00 of size 512 next 64
+2025-09-24 13:00:29.646057: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb104f5e00 of size 196608 next 65
+2025-09-24 13:00:29.646073: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10525e00 of size 196608 next 66
+2025-09-24 13:00:29.646089: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10555e00 of size 1536 next 67
+2025-09-24 13:00:29.646104: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10556400 of size 512 next 68
+2025-09-24 13:00:29.646120: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10556600 of size 196608 next 69
+2025-09-24 13:00:29.646136: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10586600 of size 196608 next 70
+2025-09-24 13:00:29.646152: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb105b6600 of size 1536 next 71
+2025-09-24 13:00:29.646168: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb105b6c00 of size 512 next 72
+2025-09-24 13:00:29.646184: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb105b6e00 of size 196608 next 73
+2025-09-24 13:00:29.646199: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb105e6e00 of size 196608 next 74
+2025-09-24 13:00:29.646215: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10616e00 of size 1536 next 75
+2025-09-24 13:00:29.646231: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10617400 of size 512 next 76
+2025-09-24 13:00:29.646247: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10617600 of size 153600 next 77
+2025-09-24 13:00:29.646263: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1063ce00 of size 1280 next 78
+2025-09-24 13:00:29.646278: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1063d300 of size 247808 next 79
+2025-09-24 13:00:29.646301: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10679b00 of size 512 next 80
+2025-09-24 13:00:29.646318: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10679d00 of size 196608 next 81
+2025-09-24 13:00:29.646334: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb106a9d00 of size 196608 next 82
+2025-09-24 13:00:29.646350: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb106d9d00 of size 1536 next 83
+2025-09-24 13:00:29.646374: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb106da300 of size 512 next 84
+2025-09-24 13:00:29.646392: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb106da500 of size 196608 next 85
+2025-09-24 13:00:29.646408: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1070a500 of size 196608 next 86
+2025-09-24 13:00:29.646424: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1073a500 of size 1536 next 87
+2025-09-24 13:00:29.646439: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1073ab00 of size 512 next 88
+2025-09-24 13:00:29.646455: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1073ad00 of size 196608 next 89
+2025-09-24 13:00:29.646471: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1076ad00 of size 196608 next 90
+2025-09-24 13:00:29.646487: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1079ad00 of size 1536 next 91
+2025-09-24 13:00:29.646502: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1079b300 of size 512 next 92
+2025-09-24 13:00:29.646518: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1079b500 of size 196608 next 93
+2025-09-24 13:00:29.646534: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb107cb500 of size 196608 next 94
+2025-09-24 13:00:29.646550: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb107fb500 of size 1536 next 95
+2025-09-24 13:00:29.646565: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb107fbb00 of size 512 next 96
+2025-09-24 13:00:29.646581: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb107fbd00 of size 196608 next 97
+2025-09-24 13:00:29.646597: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1082bd00 of size 196608 next 98
+2025-09-24 13:00:29.646612: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1085bd00 of size 1536 next 99
+2025-09-24 13:00:29.646628: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1085c300 of size 512 next 100
+2025-09-24 13:00:29.646644: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1085c500 of size 512 next 101
+2025-09-24 13:00:29.646659: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1085c700 of size 256 next 102
+2025-09-24 13:00:29.646675: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1085c800 of size 25600 next 103
+2025-09-24 13:00:29.646691: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10862c00 of size 512 next 104
+2025-09-24 13:00:29.646706: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10862e00 of size 196608 next 105
+2025-09-24 13:00:29.646722: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10892e00 of size 196608 next 106
+2025-09-24 13:00:29.646738: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb108c2e00 of size 1536 next 107
+2025-09-24 13:00:29.646754: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb108c3400 of size 512 next 108
+2025-09-24 13:00:29.646769: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb108c3600 of size 196608 next 109
+2025-09-24 13:00:29.646785: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb108f3600 of size 196608 next 110
+2025-09-24 13:00:29.646801: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10923600 of size 1536 next 111
+2025-09-24 13:00:29.646816: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10923c00 of size 512 next 112
+2025-09-24 13:00:29.646832: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10923e00 of size 196608 next 113
+2025-09-24 13:00:29.646848: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10953e00 of size 196608 next 114
+2025-09-24 13:00:29.646863: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10983e00 of size 1536 next 115
+2025-09-24 13:00:29.646886: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10984400 of size 512 next 116
+2025-09-24 13:00:29.646904: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10984600 of size 196608 next 117
+2025-09-24 13:00:29.646920: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb109b4600 of size 196608 next 118
+2025-09-24 13:00:29.646936: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb109e4600 of size 1536 next 119
+2025-09-24 13:00:29.646952: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb109e4c00 of size 512 next 120
+2025-09-24 13:00:29.646967: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb109e4e00 of size 196608 next 121
+2025-09-24 13:00:29.646983: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10a14e00 of size 196608 next 122
+2025-09-24 13:00:29.646999: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10a44e00 of size 1536 next 123
+2025-09-24 13:00:29.647015: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10a45400 of size 512 next 124
+2025-09-24 13:00:29.647030: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10a45600 of size 153600 next 125
+2025-09-24 13:00:29.647046: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10a6ae00 of size 1280 next 126
+2025-09-24 13:00:29.647062: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10a6b300 of size 247808 next 127
+2025-09-24 13:00:29.647078: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10aa7b00 of size 512 next 128
+2025-09-24 13:00:29.647093: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10aa7d00 of size 196608 next 129
+2025-09-24 13:00:29.647109: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10ad7d00 of size 196608 next 130
+2025-09-24 13:00:29.647125: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10b07d00 of size 1536 next 131
+2025-09-24 13:00:29.647140: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10b08300 of size 512 next 132
+2025-09-24 13:00:29.647156: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10b08500 of size 196608 next 133
+2025-09-24 13:00:29.647172: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10b38500 of size 196608 next 134
+2025-09-24 13:00:29.647188: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10b68500 of size 1536 next 135
+2025-09-24 13:00:29.647203: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10b68b00 of size 512 next 136
+2025-09-24 13:00:29.647219: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10b68d00 of size 196608 next 137
+2025-09-24 13:00:29.647235: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10b98d00 of size 196608 next 138
+2025-09-24 13:00:29.647250: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10bc8d00 of size 1536 next 139
+2025-09-24 13:00:29.647266: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10bc9300 of size 512 next 140
+2025-09-24 13:00:29.647282: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10bc9500 of size 196608 next 141
+2025-09-24 13:00:29.647305: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10bf9500 of size 196608 next 142
+2025-09-24 13:00:29.647321: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c29500 of size 1536 next 143
+2025-09-24 13:00:29.647337: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c29b00 of size 512 next 144
+2025-09-24 13:00:29.647353: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c29d00 of size 196608 next 145
+2025-09-24 13:00:29.647369: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c59d00 of size 196608 next 146
+2025-09-24 13:00:29.647385: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c89d00 of size 1536 next 147
+2025-09-24 13:00:29.647408: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8a300 of size 512 next 148
+2025-09-24 13:00:29.647426: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8a500 of size 512 next 149
+2025-09-24 13:00:29.647442: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8a700 of size 256 next 150
+2025-09-24 13:00:29.647458: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8a800 of size 256 next 165
+2025-09-24 13:00:29.647473: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8a900 of size 256 next 152
+2025-09-24 13:00:29.647489: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8aa00 of size 256 next 153
+2025-09-24 13:00:29.647504: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8ab00 of size 256 next 164
+2025-09-24 13:00:29.647520: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8ac00 of size 256 next 155
+2025-09-24 13:00:29.647536: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8ad00 of size 256 next 230
+2025-09-24 13:00:29.647551: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8ae00 of size 256 next 157
+2025-09-24 13:00:29.647567: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8af00 of size 256 next 163
+2025-09-24 13:00:29.647583: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8b000 of size 256 next 159
+2025-09-24 13:00:29.647598: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8b100 of size 256 next 231
+2025-09-24 13:00:29.647614: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8b200 of size 256 next 229
+2025-09-24 13:00:29.647630: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8b300 of size 256 next 162
+2025-09-24 13:00:29.647645: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8b400 of size 256 next 158
+2025-09-24 13:00:29.647661: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8b500 of size 256 next 154
+2025-09-24 13:00:29.647677: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8b600 of size 256 next 151
+2025-09-24 13:00:29.647692: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8b700 of size 256 next 166
+2025-09-24 13:00:29.647708: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8b800 of size 256 next 228
+2025-09-24 13:00:29.647724: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8b900 of size 256 next 227
+2025-09-24 13:00:29.647739: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8ba00 of size 256 next 226
+2025-09-24 13:00:29.647755: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8bb00 of size 256 next 225
+2025-09-24 13:00:29.647771: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8bc00 of size 256 next 224
+2025-09-24 13:00:29.647786: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8bd00 of size 256 next 223
+2025-09-24 13:00:29.647802: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8be00 of size 256 next 222
+2025-09-24 13:00:29.647818: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8bf00 of size 256 next 4
+2025-09-24 13:00:29.647833: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8c000 of size 256 next 220
+2025-09-24 13:00:29.647849: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8c100 of size 256 next 203
+2025-09-24 13:00:29.647865: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8c200 of size 256 next 202
+2025-09-24 13:00:29.647880: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8c300 of size 256 next 204
+2025-09-24 13:00:29.647896: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8c400 of size 256 next 205
+2025-09-24 13:00:29.647919: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8c500 of size 256 next 206
+2025-09-24 13:00:29.647936: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8c600 of size 256 next 207
+2025-09-24 13:00:29.647952: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8c700 of size 768 next 210
+2025-09-24 13:00:29.647968: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c8ca00 of size 16896 next 213
+2025-09-24 13:00:29.647986: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c90c00 of size 8192 next 214
+2025-09-24 13:00:29.648002: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c92c00 of size 8192 next 215
+2025-09-24 13:00:29.648018: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c94c00 of size 8192 next 216
+2025-09-24 13:00:29.648034: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10c96c00 of size 49152 next 212
+2025-09-24 13:00:29.648050: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10ca2c00 of size 8192 next 217
+2025-09-24 13:00:29.648065: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10ca4c00 of size 8192 next 355
+2025-09-24 13:00:29.648081: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10ca6c00 of size 16384 next 218
+2025-09-24 13:00:29.648098: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10caac00 of size 376832 next 200
+2025-09-24 13:00:29.648113: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10d06c00 of size 212992 next 198
+2025-09-24 13:00:29.648129: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10d3ac00 of size 131072 next 177
+2025-09-24 13:00:29.648146: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10d5ac00 of size 131072 next 178
+2025-09-24 13:00:29.648162: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10d7ac00 of size 98304 next 190
+2025-09-24 13:00:29.648177: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10d92c00 of size 212992 next 196
+2025-09-24 13:00:29.648193: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10dc6c00 of size 262144 next 194
+2025-09-24 13:00:29.648211: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10e06c00 of size 835584 next 193
+2025-09-24 13:00:29.648227: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10ed2c00 of size 212992 next 219
+2025-09-24 13:00:29.648243: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10f06c00 of size 212992 next 185
+2025-09-24 13:00:29.648259: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb10f3ac00 of size 2716672 next 242
+2025-09-24 13:00:29.648274: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d2000 of size 256 next 243
+2025-09-24 13:00:29.648297: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d2100 of size 256 next 244
+2025-09-24 13:00:29.648314: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d2200 of size 256 next 245
+2025-09-24 13:00:29.648330: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d2300 of size 256 next 246
+2025-09-24 13:00:29.648345: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d2400 of size 256 next 247
+2025-09-24 13:00:29.648361: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d2500 of size 256 next 248
+2025-09-24 13:00:29.648377: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d2600 of size 256 next 249
+2025-09-24 13:00:29.648393: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d2700 of size 256 next 250
+2025-09-24 13:00:29.648409: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d2800 of size 256 next 251
+2025-09-24 13:00:29.648424: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d2900 of size 512 next 252
+2025-09-24 13:00:29.648448: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d2b00 of size 512 next 253
+2025-09-24 13:00:29.648466: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d2d00 of size 512 next 254
+2025-09-24 13:00:29.648482: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d2f00 of size 512 next 255
+2025-09-24 13:00:29.648498: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d3100 of size 256 next 256
+2025-09-24 13:00:29.648514: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d3200 of size 256 next 257
+2025-09-24 13:00:29.648530: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d3300 of size 512 next 258
+2025-09-24 13:00:29.648545: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d3500 of size 256 next 259
+2025-09-24 13:00:29.648561: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d3600 of size 256 next 260
+2025-09-24 13:00:29.648577: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d3700 of size 256 next 261
+2025-09-24 13:00:29.648593: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d3800 of size 512 next 262
+2025-09-24 13:00:29.648609: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d3a00 of size 256 next 263
+2025-09-24 13:00:29.648625: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d3b00 of size 256 next 264
+2025-09-24 13:00:29.648640: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d3c00 of size 256 next 265
+2025-09-24 13:00:29.648656: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d3d00 of size 256 next 266
+2025-09-24 13:00:29.648672: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d3e00 of size 256 next 267
+2025-09-24 13:00:29.648688: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d3f00 of size 256 next 268
+2025-09-24 13:00:29.648703: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d4000 of size 256 next 269
+2025-09-24 13:00:29.648719: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d4100 of size 768 next 270
+2025-09-24 13:00:29.648735: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d4400 of size 256 next 271
+2025-09-24 13:00:29.648751: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d4500 of size 256 next 272
+2025-09-24 13:00:29.648766: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d4600 of size 256 next 273
+2025-09-24 13:00:29.648782: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d4700 of size 256 next 274
+2025-09-24 13:00:29.648798: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d4800 of size 256 next 275
+2025-09-24 13:00:29.648814: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d4900 of size 256 next 276
+2025-09-24 13:00:29.648830: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d4a00 of size 256 next 277
+2025-09-24 13:00:29.648845: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d4b00 of size 512 next 278
+2025-09-24 13:00:29.648861: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d4d00 of size 768 next 279
+2025-09-24 13:00:29.648877: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d5000 of size 512 next 280
+2025-09-24 13:00:29.648892: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d5200 of size 256 next 281
+2025-09-24 13:00:29.648908: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d5300 of size 512 next 282
+2025-09-24 13:00:29.648924: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d5500 of size 768 next 283
+2025-09-24 13:00:29.648939: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d5800 of size 512 next 284
+2025-09-24 13:00:29.648962: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d5a00 of size 256 next 285
+2025-09-24 13:00:29.648980: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d5b00 of size 256 next 286
+2025-09-24 13:00:29.648996: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d5c00 of size 768 next 287
+2025-09-24 13:00:29.649012: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d5f00 of size 256 next 288
+2025-09-24 13:00:29.649027: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d6000 of size 256 next 289
+2025-09-24 13:00:29.649043: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d6100 of size 256 next 290
+2025-09-24 13:00:29.649059: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d6200 of size 256 next 291
+2025-09-24 13:00:29.649075: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d6300 of size 256 next 292
+2025-09-24 13:00:29.649091: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d6400 of size 256 next 293
+2025-09-24 13:00:29.649106: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d6500 of size 256 next 294
+2025-09-24 13:00:29.649122: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d6600 of size 256 next 295
+2025-09-24 13:00:29.649138: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d6700 of size 256 next 296
+2025-09-24 13:00:29.649154: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d6800 of size 256 next 297
+2025-09-24 13:00:29.649169: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d6900 of size 256 next 298
+2025-09-24 13:00:29.649185: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d6a00 of size 256 next 299
+2025-09-24 13:00:29.649201: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d6b00 of size 256 next 300
+2025-09-24 13:00:29.649216: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d6c00 of size 256 next 301
+2025-09-24 13:00:29.649232: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d6d00 of size 256 next 302
+2025-09-24 13:00:29.649248: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb111d6e00 of size 5505024 next 303
+2025-09-24 13:00:29.649265: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb11716e00 of size 256 next 304
+2025-09-24 13:00:29.649280: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb11716f00 of size 1024 next 305
+2025-09-24 13:00:29.649304: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb11717300 of size 1024 next 306
+2025-09-24 13:00:29.649320: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb11717700 of size 1024 next 307
+2025-09-24 13:00:29.649336: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb11717b00 of size 256 next 308
+2025-09-24 13:00:29.649352: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb11717c00 of size 256 next 309
+2025-09-24 13:00:29.649368: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb11717d00 of size 256 next 310
+2025-09-24 13:00:29.649384: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb11717e00 of size 512 next 311
+2025-09-24 13:00:29.649399: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb11718000 of size 256 next 312
+2025-09-24 13:00:29.649415: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb11718100 of size 512 next 313
+2025-09-24 13:00:29.649431: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb11718300 of size 15335424 next 175
+2025-09-24 13:00:29.649447: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb125b8300 of size 5537792 next 184
+2025-09-24 13:00:29.649463: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb12b00300 of size 5537792 next 201
+2025-09-24 13:00:29.649487: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb13048300 of size 2129920 next 191
+2025-09-24 13:00:29.649505: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb13250300 of size 2129920 next 183
+2025-09-24 13:00:29.649521: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb13458300 of size 1916928 next 186
+2025-09-24 13:00:29.649539: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1362c300 of size 1916928 next 199
+2025-09-24 13:00:29.649555: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb13800300 of size 1277952 next 195
+2025-09-24 13:00:29.649571: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb13938300 of size 1277952 next 192
+2025-09-24 13:00:29.649587: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb13a70300 of size 1277952 next 211
+2025-09-24 13:00:29.649603: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb13ba8300 of size 1277952 next 173
+2025-09-24 13:00:29.649618: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb13ce0300 of size 1277952 next 179
+2025-09-24 13:00:29.649634: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb13e18300 of size 1277952 next 174
+2025-09-24 13:00:29.649650: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb13f50300 of size 851968 next 181
+2025-09-24 13:00:29.649666: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14020300 of size 835584 next 189
+2025-09-24 13:00:29.649682: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb140ec300 of size 638976 next 180
+2025-09-24 13:00:29.649698: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14188300 of size 638976 next 197
+2025-09-24 13:00:29.649714: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14224300 of size 638976 next 176
+2025-09-24 13:00:29.649730: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb142c0300 of size 589824 next 187
+2025-09-24 13:00:29.649746: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14350300 of size 589824 next 188
+2025-09-24 13:00:29.649762: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb143e0300 of size 589824 next 182
+2025-09-24 13:00:29.649777: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14470300 of size 589824 next 172
+2025-09-24 13:00:29.649793: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14500300 of size 589824 next 171
+2025-09-24 13:00:29.649809: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14590300 of size 589824 next 170
+2025-09-24 13:00:29.649825: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14620300 of size 516096 next 169
+2025-09-24 13:00:29.649841: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1469e300 of size 516096 next 168
+2025-09-24 13:00:29.649857: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1471c300 of size 401408 next 167
+2025-09-24 13:00:29.649873: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1477e300 of size 294912 next 241
+2025-09-24 13:00:29.649889: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb147c6300 of size 221184 next 240
+2025-09-24 13:00:29.649906: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb147fc300 of size 212992 next 239
+2025-09-24 13:00:29.649922: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14830300 of size 212992 next 238
+2025-09-24 13:00:29.649938: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14864300 of size 212992 next 161
+2025-09-24 13:00:29.649954: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14898300 of size 212992 next 160
+2025-09-24 13:00:29.649970: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb148cc300 of size 212992 next 237
+2025-09-24 13:00:29.649985: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14900300 of size 196608 next 236
+2025-09-24 13:00:29.650009: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14930300 of size 163840 next 156
+2025-09-24 13:00:29.650027: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14958300 of size 57344 next 341
+2025-09-24 13:00:29.650043: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14966300 of size 32768 next 323
+2025-09-24 13:00:29.650059: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1496e300 of size 256 next 208
+2025-09-24 13:00:29.650075: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1496e400 of size 256 next 209
+2025-09-24 13:00:29.650091: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1496e500 of size 512 next 330
+2025-09-24 13:00:29.650107: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1496e700 of size 512 next 325
+2025-09-24 13:00:29.650122: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1496e900 of size 256 next 317
+2025-09-24 13:00:29.650138: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1496ea00 of size 1024 next 318
+2025-09-24 13:00:29.650154: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1496ee00 of size 512 next 326
+2025-09-24 13:00:29.650169: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1496f000 of size 1024 next 333
+2025-09-24 13:00:29.650185: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1496f400 of size 256 next 334
+2025-09-24 13:00:29.650201: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1496f500 of size 512 next 327
+2025-09-24 13:00:29.650217: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1496f700 of size 256 next 328
+2025-09-24 13:00:29.650232: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1496f800 of size 1280 next 332
+2025-09-24 13:00:29.650248: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1496fd00 of size 256 next 322
+2025-09-24 13:00:29.650264: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1496fe00 of size 256 next 315
+2025-09-24 13:00:29.650279: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1496ff00 of size 256 next 316
+2025-09-24 13:00:29.650302: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14970000 of size 256 next 319
+2025-09-24 13:00:29.650319: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14970100 of size 512 next 320
+2025-09-24 13:00:29.650334: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14970300 of size 768 next 337
+2025-09-24 13:00:29.650350: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14970600 of size 256 next 338
+2025-09-24 13:00:29.650366: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14970700 of size 256 next 335
+2025-09-24 13:00:29.650382: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14970800 of size 256 next 336
+2025-09-24 13:00:29.650398: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14970900 of size 256 next 339
+2025-09-24 13:00:29.650414: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14970a00 of size 256 next 321
+2025-09-24 13:00:29.650429: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14970b00 of size 256 next 331
+2025-09-24 13:00:29.650445: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14970c00 of size 256 next 372
+2025-09-24 13:00:29.650461: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14970d00 of size 256 next 373
+2025-09-24 13:00:29.650477: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14970e00 of size 256 next 374
+2025-09-24 13:00:29.650492: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14970f00 of size 256 next 375
+2025-09-24 13:00:29.650508: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14971000 of size 768 next 376
+2025-09-24 13:00:29.650532: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14971300 of size 1280 next 377
+2025-09-24 13:00:29.650550: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14971800 of size 256 next 378
+2025-09-24 13:00:29.650566: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14971900 of size 2304 next 379
+2025-09-24 13:00:29.650582: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14972200 of size 1280 next 380
+2025-09-24 13:00:29.650598: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14972700 of size 2816 next 381
+2025-09-24 13:00:29.650614: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14973200 of size 1024 next 382
+2025-09-24 13:00:29.650629: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14973600 of size 2816 next 383
+2025-09-24 13:00:29.650645: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14974100 of size 256 next 384
+2025-09-24 13:00:29.650661: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14974200 of size 768 next 385
+2025-09-24 13:00:29.650676: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14974500 of size 768 next 386
+2025-09-24 13:00:29.650692: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14974800 of size 768 next 387
+2025-09-24 13:00:29.650708: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14974b00 of size 768 next 388
+2025-09-24 13:00:29.650723: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14974e00 of size 512 next 389
+2025-09-24 13:00:29.650739: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14975000 of size 512 next 390
+2025-09-24 13:00:29.650755: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14975200 of size 256 next 391
+2025-09-24 13:00:29.650770: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14975300 of size 256 next 392
+2025-09-24 13:00:29.650786: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14975400 of size 256 next 393
+2025-09-24 13:00:29.650802: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14975500 of size 512 next 394
+2025-09-24 13:00:29.650817: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14975700 of size 256 next 395
+2025-09-24 13:00:29.650833: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14975800 of size 256 next 396
+2025-09-24 13:00:29.650849: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14975900 of size 256 next 397
+2025-09-24 13:00:29.650864: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14975a00 of size 256 next 398
+2025-09-24 13:00:29.650880: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14975b00 of size 256 next 399
+2025-09-24 13:00:29.650896: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14975c00 of size 256 next 400
+2025-09-24 13:00:29.650911: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14975d00 of size 256 next 401
+2025-09-24 13:00:29.650927: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14975e00 of size 512 next 402
+2025-09-24 13:00:29.650943: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14976000 of size 7680 next 403
+2025-09-24 13:00:29.650959: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14977e00 of size 512 next 404
+2025-09-24 13:00:29.650975: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14978000 of size 512 next 405
+2025-09-24 13:00:29.650990: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14978200 of size 512 next 406
+2025-09-24 13:00:29.651006: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14978400 of size 512 next 407
+2025-09-24 13:00:29.651021: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14978600 of size 512 next 408
+2025-09-24 13:00:29.651045: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14978800 of size 512 next 409
+2025-09-24 13:00:29.651062: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14978a00 of size 256 next 410
+2025-09-24 13:00:29.651078: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14978b00 of size 256 next 411
+2025-09-24 13:00:29.651094: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14978c00 of size 256 next 412
+2025-09-24 13:00:29.651110: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14978d00 of size 256 next 413
+2025-09-24 13:00:29.651125: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14978e00 of size 256 next 414
+2025-09-24 13:00:29.651141: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14978f00 of size 256 next 415
+2025-09-24 13:00:29.651157: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14979000 of size 256 next 416
+2025-09-24 13:00:29.651173: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14979100 of size 256 next 417
+2025-09-24 13:00:29.651188: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14979200 of size 512 next 418
+2025-09-24 13:00:29.651204: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14979400 of size 256 next 419
+2025-09-24 13:00:29.651220: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14979500 of size 256 next 420
+2025-09-24 13:00:29.651236: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14979600 of size 256 next 421
+2025-09-24 13:00:29.651252: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14979700 of size 2560 next 422
+2025-09-24 13:00:29.651267: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1497a100 of size 2560 next 423
+2025-09-24 13:00:29.651290: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1497ab00 of size 256 next 424
+2025-09-24 13:00:29.651307: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1497ac00 of size 256 next 425
+2025-09-24 13:00:29.651323: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1497ad00 of size 256 next 426
+2025-09-24 13:00:29.651339: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1497ae00 of size 256 next 427
+2025-09-24 13:00:29.651355: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1497af00 of size 256 next 428
+2025-09-24 13:00:29.651371: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1497b000 of size 256 next 429
+2025-09-24 13:00:29.651387: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1497b100 of size 8192 next 503
+2025-09-24 13:00:29.651403: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1497d100 of size 12800 next 235
+2025-09-24 13:00:29.651420: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14980300 of size 163840 next 234
+2025-09-24 13:00:29.651436: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb149a8300 of size 163840 next 233
+2025-09-24 13:00:29.651452: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb149d0300 of size 65536 next 232
+2025-09-24 13:00:29.651468: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb149e0300 of size 8192 next 314
+2025-09-24 13:00:29.651484: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb149e2300 of size 256 next 340
+2025-09-24 13:00:29.651500: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb149e2400 of size 11776 next 342
+2025-09-24 13:00:29.651516: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb149e5200 of size 212992 next 343
+2025-09-24 13:00:29.651532: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14a19200 of size 212992 next 344
+2025-09-24 13:00:29.651547: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14a4d200 of size 163840 next 345
+2025-09-24 13:00:29.651572: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14a75200 of size 212992 next 346
+2025-09-24 13:00:29.651589: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14aa9200 of size 1277952 next 347
+2025-09-24 13:00:29.651605: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14be1200 of size 212992 next 348
+2025-09-24 13:00:29.651621: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14c15200 of size 147456 next 349
+2025-09-24 13:00:29.651638: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14c39200 of size 212992 next 350
+2025-09-24 13:00:29.651654: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14c6d200 of size 212992 next 351
+2025-09-24 13:00:29.651669: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14ca1200 of size 212992 next 352
+2025-09-24 13:00:29.651685: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14cd5200 of size 163840 next 353
+2025-09-24 13:00:29.651701: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14cfd200 of size 212992 next 354
+2025-09-24 13:00:29.651717: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb14d31200 of size 4259840 next 356
+2025-09-24 13:00:29.651733: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb15141200 of size 1662976 next 357
+2025-09-24 13:00:29.651749: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb152d7200 of size 163840 next 358
+2025-09-24 13:00:29.651765: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb152ff200 of size 638976 next 359
+2025-09-24 13:00:29.651781: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1539b200 of size 638976 next 360
+2025-09-24 13:00:29.651797: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb15437200 of size 65536 next 361
+2025-09-24 13:00:29.651813: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb15447200 of size 131072 next 362
+2025-09-24 13:00:29.651829: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb15467200 of size 131072 next 363
+2025-09-24 13:00:29.651845: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb15487200 of size 327680 next 364
+2025-09-24 13:00:29.651861: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb154d7200 of size 65536 next 365
+2025-09-24 13:00:29.651877: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb154e7200 of size 65536 next 366
+2025-09-24 13:00:29.651893: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb154f7200 of size 131072 next 367
+2025-09-24 13:00:29.651908: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb15517200 of size 589824 next 368
+2025-09-24 13:00:29.651924: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb155a7200 of size 589824 next 369
+2025-09-24 13:00:29.651940: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb15637200 of size 163840 next 370
+2025-09-24 13:00:29.651956: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1565f200 of size 163840 next 371
+2025-09-24 13:00:29.651972: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb15687200 of size 5242880 next 324
+2025-09-24 13:00:29.651988: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb15b87200 of size 5242880 next 329
+2025-09-24 13:00:29.652003: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb16087200 of size 8000000 next 434
+2025-09-24 13:00:29.652021: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb16828400 of size 4800000 next 439
+2025-09-24 13:00:29.652037: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb16cbc200 of size 3328000 next 436
+2025-09-24 13:00:29.652053: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb16fe8a00 of size 2496000 next 440
+2025-09-24 13:00:29.652069: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1724a000 of size 864000 next 437
+2025-09-24 13:00:29.652095: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1731cf00 of size 832000 next 438
+2025-09-24 13:00:29.652113: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb173e8100 of size 640000 next 430
+2025-09-24 13:00:29.652130: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17484500 of size 640000 next 433
+2025-09-24 13:00:29.652145: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17520900 of size 640000 next 432
+2025-09-24 13:00:29.652161: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb175bcd00 of size 640000 next 431
+2025-09-24 13:00:29.652177: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17659100 of size 640000 next 435
+2025-09-24 13:00:29.652193: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb176f5500 of size 640000 next 441
+2025-09-24 13:00:29.652209: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17791900 of size 640000 next 442
+2025-09-24 13:00:29.652225: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1782dd00 of size 640000 next 443
+2025-09-24 13:00:29.652241: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb178ca100 of size 640000 next 444
+2025-09-24 13:00:29.652257: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17966500 of size 224000 next 445
+2025-09-24 13:00:29.652273: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1799d000 of size 192000 next 446
+2025-09-24 13:00:29.652301: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb179cbe00 of size 128000 next 447
+2025-09-24 13:00:29.652319: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb179eb200 of size 128000 next 448
+2025-09-24 13:00:29.652335: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17a0a600 of size 128000 next 449
+2025-09-24 13:00:29.652351: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17a29a00 of size 96000 next 450
+2025-09-24 13:00:29.652367: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17a41100 of size 96000 next 451
+2025-09-24 13:00:29.652383: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17a58800 of size 96000 next 452
+2025-09-24 13:00:29.652399: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17a6ff00 of size 96000 next 453
+2025-09-24 13:00:29.652415: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17a87600 of size 96000 next 454
+2025-09-24 13:00:29.652430: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17a9ed00 of size 96000 next 455
+2025-09-24 13:00:29.652446: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17ab6400 of size 96000 next 456
+2025-09-24 13:00:29.652462: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17acdb00 of size 96000 next 457
+2025-09-24 13:00:29.652478: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17ae5200 of size 96000 next 458
+2025-09-24 13:00:29.652494: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17afc900 of size 96000 next 459
+2025-09-24 13:00:29.652510: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17b14000 of size 96000 next 460
+2025-09-24 13:00:29.652525: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17b2b700 of size 96000 next 461
+2025-09-24 13:00:29.652541: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17b42e00 of size 96000 next 462
+2025-09-24 13:00:29.652557: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17b5a500 of size 64000 next 463
+2025-09-24 13:00:29.652573: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17b69f00 of size 64000 next 464
+2025-09-24 13:00:29.652589: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17b79900 of size 64000 next 465
+2025-09-24 13:00:29.652613: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17b89300 of size 64000 next 466
+2025-09-24 13:00:29.652631: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17b98d00 of size 64000 next 467
+2025-09-24 13:00:29.652647: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17ba8700 of size 64000 next 468
+2025-09-24 13:00:29.652663: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17bb8100 of size 64000 next 469
+2025-09-24 13:00:29.652679: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17bc7b00 of size 64000 next 470
+2025-09-24 13:00:29.652694: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17bd7500 of size 64000 next 471
+2025-09-24 13:00:29.652710: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17be6f00 of size 64000 next 472
+2025-09-24 13:00:29.652726: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17bf6900 of size 64000 next 473
+2025-09-24 13:00:29.652742: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17c06300 of size 64000 next 474
+2025-09-24 13:00:29.652758: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17c15d00 of size 64000 next 475
+2025-09-24 13:00:29.652773: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17c25700 of size 64000 next 476
+2025-09-24 13:00:29.652789: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17c35100 of size 64000 next 477
+2025-09-24 13:00:29.652805: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17c44b00 of size 64000 next 478
+2025-09-24 13:00:29.652821: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17c54500 of size 64000 next 479
+2025-09-24 13:00:29.652836: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17c63f00 of size 64000 next 480
+2025-09-24 13:00:29.652852: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17c73900 of size 64000 next 481
+2025-09-24 13:00:29.652868: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17c83300 of size 64000 next 482
+2025-09-24 13:00:29.652884: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17c92d00 of size 32000 next 483
+2025-09-24 13:00:29.652900: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17c9aa00 of size 32000 next 484
+2025-09-24 13:00:29.652916: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17ca2700 of size 32000 next 485
+2025-09-24 13:00:29.652932: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17caa400 of size 32000 next 486
+2025-09-24 13:00:29.652948: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17cb2100 of size 32000 next 487
+2025-09-24 13:00:29.652964: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17cb9e00 of size 32000 next 488
+2025-09-24 13:00:29.652979: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17cc1b00 of size 32000 next 489
+2025-09-24 13:00:29.652995: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17cc9800 of size 32000 next 490
+2025-09-24 13:00:29.653011: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17cd1500 of size 32000 next 491
+2025-09-24 13:00:29.653027: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17cd9200 of size 32000 next 492
+2025-09-24 13:00:29.653043: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17ce0f00 of size 32000 next 493
+2025-09-24 13:00:29.653059: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17ce8c00 of size 32000 next 494
+2025-09-24 13:00:29.653074: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17cf0900 of size 32000 next 495
+2025-09-24 13:00:29.653090: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17cf8600 of size 32000 next 496
+2025-09-24 13:00:29.653106: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d00300 of size 32000 next 497
+2025-09-24 13:00:29.653129: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d08000 of size 32000 next 498
+2025-09-24 13:00:29.653147: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d0fd00 of size 32000 next 499
+2025-09-24 13:00:29.653163: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d17a00 of size 32000 next 500
+2025-09-24 13:00:29.653179: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d1f700 of size 32000 next 501
+2025-09-24 13:00:29.653195: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d27400 of size 32000 next 502
+2025-09-24 13:00:29.653210: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d2f100 of size 7680 next 504
+2025-09-24 13:00:29.653226: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d30f00 of size 2816 next 505
+2025-09-24 13:00:29.653242: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d31a00 of size 2816 next 506
+2025-09-24 13:00:29.653258: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d32500 of size 2560 next 507
+2025-09-24 13:00:29.653274: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d32f00 of size 2560 next 508
+2025-09-24 13:00:29.653297: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d33900 of size 2304 next 509
+2025-09-24 13:00:29.653314: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d34200 of size 256 next 675
+2025-09-24 13:00:29.653330: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d34300 of size 512 next 242645
+2025-09-24 13:00:29.653346: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d34500 of size 768 next 510
+2025-09-24 13:00:29.653361: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d34800 of size 1280 next 511
+2025-09-24 13:00:29.653377: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d34d00 of size 1280 next 512
+2025-09-24 13:00:29.653393: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d35200 of size 1280 next 513
+2025-09-24 13:00:29.653409: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d35700 of size 1024 next 514
+2025-09-24 13:00:29.653425: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d35b00 of size 1024 next 515
+2025-09-24 13:00:29.653440: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d35f00 of size 1024 next 516
+2025-09-24 13:00:29.653456: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d36300 of size 768 next 517
+2025-09-24 13:00:29.653472: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d36600 of size 768 next 518
+2025-09-24 13:00:29.653488: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d36900 of size 768 next 519
+2025-09-24 13:00:29.653503: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d36c00 of size 768 next 520
+2025-09-24 13:00:29.653519: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d36f00 of size 768 next 521
+2025-09-24 13:00:29.653535: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d37200 of size 768 next 522
+2025-09-24 13:00:29.653550: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d37500 of size 768 next 523
+2025-09-24 13:00:29.653566: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d37800 of size 512 next 524
+2025-09-24 13:00:29.653582: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d37a00 of size 512 next 525
+2025-09-24 13:00:29.653597: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d37c00 of size 512 next 526
+2025-09-24 13:00:29.653613: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d37e00 of size 512 next 527
+2025-09-24 13:00:29.653629: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d38000 of size 512 next 528
+2025-09-24 13:00:29.653652: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d38200 of size 512 next 529
+2025-09-24 13:00:29.653670: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d38400 of size 512 next 530
+2025-09-24 13:00:29.653686: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d38600 of size 512 next 531
+2025-09-24 13:00:29.653702: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d38800 of size 512 next 532
+2025-09-24 13:00:29.653718: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d38a00 of size 512 next 533
+2025-09-24 13:00:29.653733: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d38c00 of size 512 next 534
+2025-09-24 13:00:29.653749: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d38e00 of size 512 next 535
+2025-09-24 13:00:29.653765: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d39000 of size 512 next 536
+2025-09-24 13:00:29.653781: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d39200 of size 512 next 537
+2025-09-24 13:00:29.653796: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d39400 of size 512 next 538
+2025-09-24 13:00:29.653812: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d39600 of size 512 next 539
+2025-09-24 13:00:29.653828: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d39800 of size 256 next 540
+2025-09-24 13:00:29.653844: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d39900 of size 256 next 541
+2025-09-24 13:00:29.653860: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d39a00 of size 256 next 542
+2025-09-24 13:00:29.653876: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d39b00 of size 256 next 543
+2025-09-24 13:00:29.653891: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d39c00 of size 256 next 544
+2025-09-24 13:00:29.653907: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d39d00 of size 256 next 545
+2025-09-24 13:00:29.653923: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d39e00 of size 256 next 546
+2025-09-24 13:00:29.653939: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d39f00 of size 256 next 547
+2025-09-24 13:00:29.653955: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3a000 of size 256 next 548
+2025-09-24 13:00:29.653970: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3a100 of size 256 next 549
+2025-09-24 13:00:29.653986: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3a200 of size 256 next 550
+2025-09-24 13:00:29.654002: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3a300 of size 256 next 551
+2025-09-24 13:00:29.654018: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3a400 of size 256 next 552
+2025-09-24 13:00:29.654034: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3a500 of size 256 next 553
+2025-09-24 13:00:29.654049: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3a600 of size 256 next 554
+2025-09-24 13:00:29.654065: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3a700 of size 256 next 555
+2025-09-24 13:00:29.654081: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3a800 of size 256 next 556
+2025-09-24 13:00:29.654097: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3a900 of size 256 next 557
+2025-09-24 13:00:29.654113: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3aa00 of size 256 next 558
+2025-09-24 13:00:29.654129: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3ab00 of size 256 next 559
+2025-09-24 13:00:29.654144: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3ac00 of size 256 next 560
+2025-09-24 13:00:29.654167: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3ad00 of size 256 next 561
+2025-09-24 13:00:29.654185: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3ae00 of size 256 next 562
+2025-09-24 13:00:29.654201: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3af00 of size 256 next 563
+2025-09-24 13:00:29.654217: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3b000 of size 256 next 564
+2025-09-24 13:00:29.654232: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3b100 of size 256 next 565
+2025-09-24 13:00:29.654248: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3b200 of size 256 next 566
+2025-09-24 13:00:29.654264: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3b300 of size 256 next 567
+2025-09-24 13:00:29.654279: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3b400 of size 256 next 568
+2025-09-24 13:00:29.654303: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3b500 of size 256 next 569
+2025-09-24 13:00:29.654319: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3b600 of size 256 next 570
+2025-09-24 13:00:29.654335: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3b700 of size 256 next 571
+2025-09-24 13:00:29.654351: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3b800 of size 256 next 572
+2025-09-24 13:00:29.654367: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3b900 of size 256 next 573
+2025-09-24 13:00:29.654383: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3ba00 of size 256 next 574
+2025-09-24 13:00:29.654399: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3bb00 of size 256 next 575
+2025-09-24 13:00:29.654414: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3bc00 of size 256 next 576
+2025-09-24 13:00:29.654430: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3bd00 of size 256 next 577
+2025-09-24 13:00:29.654446: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3be00 of size 256 next 578
+2025-09-24 13:00:29.654462: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3bf00 of size 256 next 579
+2025-09-24 13:00:29.654477: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3c000 of size 256 next 580
+2025-09-24 13:00:29.654493: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3c100 of size 256 next 581
+2025-09-24 13:00:29.654509: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3c200 of size 256 next 582
+2025-09-24 13:00:29.654525: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3c300 of size 256 next 583
+2025-09-24 13:00:29.654540: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3c400 of size 256 next 584
+2025-09-24 13:00:29.654556: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3c500 of size 256 next 585
+2025-09-24 13:00:29.654572: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3c600 of size 256 next 586
+2025-09-24 13:00:29.654588: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3c700 of size 256 next 587
+2025-09-24 13:00:29.654603: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3c800 of size 256 next 588
+2025-09-24 13:00:29.654619: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3c900 of size 256 next 589
+2025-09-24 13:00:29.654635: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3ca00 of size 256 next 590
+2025-09-24 13:00:29.654650: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3cb00 of size 256 next 591
+2025-09-24 13:00:29.654666: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3cc00 of size 256 next 592
+2025-09-24 13:00:29.654682: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3cd00 of size 256 next 593
+2025-09-24 13:00:29.654706: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3ce00 of size 256 next 594
+2025-09-24 13:00:29.654723: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3cf00 of size 256 next 595
+2025-09-24 13:00:29.654739: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3d000 of size 8192 next 661
+2025-09-24 13:00:29.654755: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d3f000 of size 8192 next 658
+2025-09-24 13:00:29.654771: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d41000 of size 15616 next 632
+2025-09-24 13:00:29.654787: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d44d00 of size 32000 next 607
+2025-09-24 13:00:29.654803: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d4ca00 of size 64000 next 602
+2025-09-24 13:00:29.654819: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d5c400 of size 64000 next 606
+2025-09-24 13:00:29.654835: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d6be00 of size 64000 next 604
+2025-09-24 13:00:29.654850: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d7b800 of size 64000 next 608
+2025-09-24 13:00:29.654866: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d8b200 of size 64000 next 609
+2025-09-24 13:00:29.654882: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17d9ac00 of size 64000 next 610
+2025-09-24 13:00:29.654898: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17daa600 of size 64000 next 611
+2025-09-24 13:00:29.654914: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17dba000 of size 64000 next 612
+2025-09-24 13:00:29.654929: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17dc9a00 of size 64000 next 613
+2025-09-24 13:00:29.654945: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17dd9400 of size 64000 next 614
+2025-09-24 13:00:29.654961: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17de8e00 of size 64000 next 615
+2025-09-24 13:00:29.654977: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17df8800 of size 96000 next 599
+2025-09-24 13:00:29.654993: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17e0ff00 of size 864000 next 596
+2025-09-24 13:00:29.655009: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17ee2e00 of size 832000 next 597
+2025-09-24 13:00:29.655025: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb17fae000 of size 640000 next 601
+2025-09-24 13:00:29.655041: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1804a400 of size 64000 next 618
+2025-09-24 13:00:29.655056: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18059e00 of size 64000 next 616
+2025-09-24 13:00:29.655072: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18069800 of size 64000 next 617
+2025-09-24 13:00:29.655088: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18079200 of size 64000 next 619
+2025-09-24 13:00:29.655104: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18088c00 of size 64000 next 620
+2025-09-24 13:00:29.655120: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18098600 of size 64000 next 621
+2025-09-24 13:00:29.655136: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb180a8000 of size 64000 next 622
+2025-09-24 13:00:29.655152: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb180b7a00 of size 64000 next 623
+2025-09-24 13:00:29.655167: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb180c7400 of size 32000 next 647
+2025-09-24 13:00:29.655183: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb180cf100 of size 32000 next 650
+2025-09-24 13:00:29.655206: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb180d6e00 of size 32000 next 629
+2025-09-24 13:00:29.655224: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb180deb00 of size 96000 next 625
+2025-09-24 13:00:29.655240: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb180f6200 of size 96000 next 628
+2025-09-24 13:00:29.655256: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1810d900 of size 96000 next 624
+2025-09-24 13:00:29.655272: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18125000 of size 96000 next 630
+2025-09-24 13:00:29.655294: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1813c700 of size 160000 next 627
+2025-09-24 13:00:29.655312: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18163800 of size 704000 next 603
+2025-09-24 13:00:29.655328: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1820f600 of size 2496000 next 598
+2025-09-24 13:00:29.655344: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18470c00 of size 640000 next 626
+2025-09-24 13:00:29.655359: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1850d000 of size 128000 next 633
+2025-09-24 13:00:29.655375: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1852c400 of size 96000 next 646
+2025-09-24 13:00:29.655391: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18543b00 of size 96000 next 639
+2025-09-24 13:00:29.655406: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1855b200 of size 192000 next 631
+2025-09-24 13:00:29.655422: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1858a000 of size 128000 next 637
+2025-09-24 13:00:29.655438: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185a9400 of size 128000 next 643
+2025-09-24 13:00:29.655453: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185c8800 of size 96000 next 649
+2025-09-24 13:00:29.655469: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185dff00 of size 32000 next 653
+2025-09-24 13:00:29.655485: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e7c00 of size 512 next 242647
+2025-09-24 13:00:29.655500: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e7e00 of size 512 next 242653
+2025-09-24 13:00:29.655516: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e8000 of size 512 next 242648
+2025-09-24 13:00:29.655532: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e8200 of size 512 next 242654
+2025-09-24 13:00:29.655547: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e8400 of size 512 next 242652
+2025-09-24 13:00:29.655563: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e8600 of size 512 next 242649
+2025-09-24 13:00:29.655578: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e8800 of size 512 next 242644
+2025-09-24 13:00:29.655594: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e8a00 of size 512 next 242646
+2025-09-24 13:00:29.655609: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e8c00 of size 512 next 242650
+2025-09-24 13:00:29.655625: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e8e00 of size 512 next 676
+2025-09-24 13:00:29.655640: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e9000 of size 512 next 242651
+2025-09-24 13:00:29.655656: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e9200 of size 512 next 242643
+2025-09-24 13:00:29.655671: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e9400 of size 512 next 242642
+2025-09-24 13:00:29.655687: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e9600 of size 512 next 242641
+2025-09-24 13:00:29.655702: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e9800 of size 512 next 242640
+2025-09-24 13:00:29.655726: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e9a00 of size 512 next 242639
+2025-09-24 13:00:29.655743: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e9c00 of size 512 next 242638
+2025-09-24 13:00:29.655759: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185e9e00 of size 512 next 242637
+2025-09-24 13:00:29.655775: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ea000 of size 512 next 242636
+2025-09-24 13:00:29.655791: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ea200 of size 512 next 242635
+2025-09-24 13:00:29.655806: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ea400 of size 512 next 242634
+2025-09-24 13:00:29.655822: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ea600 of size 512 next 242627
+2025-09-24 13:00:29.655838: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ea800 of size 512 next 242631
+2025-09-24 13:00:29.655853: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eaa00 of size 512 next 242633
+2025-09-24 13:00:29.655869: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eac00 of size 512 next 242632
+2025-09-24 13:00:29.655884: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eae00 of size 512 next 242630
+2025-09-24 13:00:29.655900: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eb000 of size 512 next 242628
+2025-09-24 13:00:29.655916: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eb200 of size 512 next 242629
+2025-09-24 13:00:29.655931: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eb400 of size 512 next 242625
+2025-09-24 13:00:29.655947: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eb600 of size 512 next 242626
+2025-09-24 13:00:29.655963: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eb800 of size 512 next 242624
+2025-09-24 13:00:29.655978: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eba00 of size 512 next 242623
+2025-09-24 13:00:29.655994: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ebc00 of size 512 next 242622
+2025-09-24 13:00:29.656010: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ebe00 of size 512 next 242621
+2025-09-24 13:00:29.656025: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ec000 of size 512 next 242620
+2025-09-24 13:00:29.656041: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ec200 of size 512 next 242619
+2025-09-24 13:00:29.656057: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ec400 of size 512 next 242618
+2025-09-24 13:00:29.656072: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ec600 of size 512 next 242617
+2025-09-24 13:00:29.656088: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ec800 of size 512 next 242616
+2025-09-24 13:00:29.656104: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eca00 of size 512 next 242615
+2025-09-24 13:00:29.656119: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ecc00 of size 512 next 242614
+2025-09-24 13:00:29.656135: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ece00 of size 512 next 242613
+2025-09-24 13:00:29.656150: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ed000 of size 512 next 242612
+2025-09-24 13:00:29.656166: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ed200 of size 512 next 242611
+2025-09-24 13:00:29.656182: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ed400 of size 256 next 242610
+2025-09-24 13:00:29.656197: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ed500 of size 256 next 242609
+2025-09-24 13:00:29.656220: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ed600 of size 256 next 242608
+2025-09-24 13:00:29.656238: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ed700 of size 256 next 242607
+2025-09-24 13:00:29.656253: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ed800 of size 256 next 242606
+2025-09-24 13:00:29.656269: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ed900 of size 256 next 242605
+2025-09-24 13:00:29.656291: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eda00 of size 256 next 242604
+2025-09-24 13:00:29.656309: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185edb00 of size 256 next 242603
+2025-09-24 13:00:29.656325: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185edc00 of size 256 next 242602
+2025-09-24 13:00:29.656340: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185edd00 of size 256 next 242601
+2025-09-24 13:00:29.656356: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ede00 of size 256 next 242600
+2025-09-24 13:00:29.656372: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185edf00 of size 256 next 242599
+2025-09-24 13:00:29.656387: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ee000 of size 256 next 242597
+2025-09-24 13:00:29.656403: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ee100 of size 256 next 242595
+2025-09-24 13:00:29.656419: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ee200 of size 256 next 242598
+2025-09-24 13:00:29.656435: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ee300 of size 256 next 242594
+2025-09-24 13:00:29.656450: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ee400 of size 256 next 242596
+2025-09-24 13:00:29.656466: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ee500 of size 256 next 242593
+2025-09-24 13:00:29.656482: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ee600 of size 256 next 242592
+2025-09-24 13:00:29.656497: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ee700 of size 256 next 242591
+2025-09-24 13:00:29.656513: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ee800 of size 256 next 801
+2025-09-24 13:00:29.656529: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ee900 of size 256 next 802
+2025-09-24 13:00:29.656544: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eea00 of size 256 next 800
+2025-09-24 13:00:29.656560: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eeb00 of size 256 next 799
+2025-09-24 13:00:29.656576: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eec00 of size 256 next 798
+2025-09-24 13:00:29.656592: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eed00 of size 256 next 797
+2025-09-24 13:00:29.656607: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eee00 of size 256 next 796
+2025-09-24 13:00:29.656623: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185eef00 of size 256 next 707
+2025-09-24 13:00:29.656638: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ef000 of size 256 next 793
+2025-09-24 13:00:29.656654: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ef100 of size 256 next 795
+2025-09-24 13:00:29.656670: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ef200 of size 256 next 794
+2025-09-24 13:00:29.656685: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ef300 of size 256 next 792
+2025-09-24 13:00:29.656701: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ef400 of size 256 next 708
+2025-09-24 13:00:29.656717: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ef500 of size 256 next 791
+2025-09-24 13:00:29.656740: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ef600 of size 256 next 790
+2025-09-24 13:00:29.656758: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ef700 of size 256 next 789
+2025-09-24 13:00:29.656774: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ef800 of size 256 next 663
+2025-09-24 13:00:29.656790: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185ef900 of size 32000 next 652
+2025-09-24 13:00:29.656805: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb185f7600 of size 96000 next 648
+2025-09-24 13:00:29.656821: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1860ed00 of size 96000 next 641
+2025-09-24 13:00:29.656837: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18626400 of size 640000 next 638
+2025-09-24 13:00:29.656853: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb186c2800 of size 96000 next 654
+2025-09-24 13:00:29.656869: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb186d9f00 of size 96000 next 651
+2025-09-24 13:00:29.656884: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb186f1600 of size 96000 next 656
+2025-09-24 13:00:29.656900: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18708d00 of size 32000 next 657
+2025-09-24 13:00:29.656916: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18710a00 of size 32000 next 662
+2025-09-24 13:00:29.656932: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18718700 of size 32000 next 664
+2025-09-24 13:00:29.656947: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18720400 of size 32000 next 665
+2025-09-24 13:00:29.656963: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18728100 of size 32000 next 666
+2025-09-24 13:00:29.656979: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1872fe00 of size 32000 next 667
+2025-09-24 13:00:29.656995: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18737b00 of size 32000 next 659
+2025-09-24 13:00:29.657011: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1873f800 of size 384000 next 605
+2025-09-24 13:00:29.657028: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1879d400 of size 3328000 next 600
+2025-09-24 13:00:29.657044: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18ac9c00 of size 640000 next 640
+2025-09-24 13:00:29.657060: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18b66000 of size 640000 next 642
+2025-09-24 13:00:29.657076: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18c02400 of size 640000 next 644
+2025-09-24 13:00:29.657092: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18c9e800 of size 640000 next 645
+2025-09-24 13:00:29.657107: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d3ac00 of size 32000 next 668
+2025-09-24 13:00:29.657123: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d42900 of size 32000 next 669
+2025-09-24 13:00:29.657139: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d4a600 of size 32000 next 670
+2025-09-24 13:00:29.657155: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d52300 of size 32000 next 671
+2025-09-24 13:00:29.657170: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d5a000 of size 32000 next 672
+2025-09-24 13:00:29.657186: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d61d00 of size 32000 next 673
+2025-09-24 13:00:29.657202: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d69a00 of size 32000 next 674
+2025-09-24 13:00:29.657217: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d71700 of size 256 next 788
+2025-09-24 13:00:29.657233: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d71800 of size 256 next 787
+2025-09-24 13:00:29.657256: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d71900 of size 256 next 786
+2025-09-24 13:00:29.657274: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d71a00 of size 256 next 785
+2025-09-24 13:00:29.657296: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d71b00 of size 256 next 784
+2025-09-24 13:00:29.657313: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d71c00 of size 256 next 783
+2025-09-24 13:00:29.657328: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d71d00 of size 256 next 776
+2025-09-24 13:00:29.657344: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d71e00 of size 256 next 780
+2025-09-24 13:00:29.657360: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d71f00 of size 256 next 782
+2025-09-24 13:00:29.657375: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72000 of size 256 next 781
+2025-09-24 13:00:29.657391: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72100 of size 256 next 779
+2025-09-24 13:00:29.657406: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72200 of size 256 next 777
+2025-09-24 13:00:29.657422: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72300 of size 256 next 778
+2025-09-24 13:00:29.657438: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72400 of size 256 next 774
+2025-09-24 13:00:29.657454: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72500 of size 256 next 775
+2025-09-24 13:00:29.657469: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72600 of size 256 next 773
+2025-09-24 13:00:29.657485: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72700 of size 256 next 772
+2025-09-24 13:00:29.657501: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72800 of size 256 next 771
+2025-09-24 13:00:29.657516: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72900 of size 256 next 770
+2025-09-24 13:00:29.657532: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72a00 of size 256 next 769
+2025-09-24 13:00:29.657548: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72b00 of size 256 next 768
+2025-09-24 13:00:29.657563: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72c00 of size 256 next 767
+2025-09-24 13:00:29.657579: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72d00 of size 256 next 766
+2025-09-24 13:00:29.657595: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72e00 of size 256 next 765
+2025-09-24 13:00:29.657610: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d72f00 of size 256 next 764
+2025-09-24 13:00:29.657626: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73000 of size 256 next 763
+2025-09-24 13:00:29.657642: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73100 of size 256 next 762
+2025-09-24 13:00:29.657657: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73200 of size 256 next 761
+2025-09-24 13:00:29.657673: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73300 of size 256 next 760
+2025-09-24 13:00:29.657689: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73400 of size 256 next 759
+2025-09-24 13:00:29.657704: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73500 of size 256 next 758
+2025-09-24 13:00:29.657720: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73600 of size 256 next 757
+2025-09-24 13:00:29.657736: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73700 of size 256 next 741
+2025-09-24 13:00:29.657751: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73800 of size 256 next 754
+2025-09-24 13:00:29.657775: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73900 of size 256 next 756
+2025-09-24 13:00:29.657792: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73a00 of size 256 next 755
+2025-09-24 13:00:29.657808: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73b00 of size 256 next 753
+2025-09-24 13:00:29.657824: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73c00 of size 256 next 740
+2025-09-24 13:00:29.657839: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73d00 of size 256 next 752
+2025-09-24 13:00:29.657855: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73e00 of size 256 next 751
+2025-09-24 13:00:29.657871: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d73f00 of size 256 next 750
+2025-09-24 13:00:29.657886: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74000 of size 256 next 749
+2025-09-24 13:00:29.657902: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74100 of size 256 next 745
+2025-09-24 13:00:29.657917: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74200 of size 256 next 747
+2025-09-24 13:00:29.657933: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74300 of size 256 next 748
+2025-09-24 13:00:29.657949: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74400 of size 256 next 744
+2025-09-24 13:00:29.657964: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74500 of size 256 next 743
+2025-09-24 13:00:29.657980: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74600 of size 256 next 746
+2025-09-24 13:00:29.657996: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74700 of size 256 next 863
+2025-09-24 13:00:29.658011: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74800 of size 256 next 864
+2025-09-24 13:00:29.658027: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74900 of size 256 next 862
+2025-09-24 13:00:29.658043: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74a00 of size 256 next 861
+2025-09-24 13:00:29.658058: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74b00 of size 256 next 860
+2025-09-24 13:00:29.658074: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74c00 of size 256 next 859
+2025-09-24 13:00:29.658090: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74d00 of size 256 next 858
+2025-09-24 13:00:29.658105: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74e00 of size 256 next 857
+2025-09-24 13:00:29.658121: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d74f00 of size 256 next 856
+2025-09-24 13:00:29.658136: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75000 of size 256 next 855
+2025-09-24 13:00:29.658152: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75100 of size 256 next 854
+2025-09-24 13:00:29.658168: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75200 of size 256 next 853
+2025-09-24 13:00:29.658183: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75300 of size 256 next 852
+2025-09-24 13:00:29.658199: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75400 of size 256 next 851
+2025-09-24 13:00:29.658215: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75500 of size 256 next 850
+2025-09-24 13:00:29.658230: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75600 of size 256 next 849
+2025-09-24 13:00:29.658246: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75700 of size 256 next 848
+2025-09-24 13:00:29.658261: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75800 of size 256 next 847
+2025-09-24 13:00:29.658277: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75900 of size 256 next 846
+2025-09-24 13:00:29.658307: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75a00 of size 256 next 742
+2025-09-24 13:00:29.658325: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75b00 of size 256 next 843
+2025-09-24 13:00:29.658341: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75c00 of size 256 next 845
+2025-09-24 13:00:29.658357: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75d00 of size 256 next 844
+2025-09-24 13:00:29.658373: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75e00 of size 256 next 842
+2025-09-24 13:00:29.658388: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d75f00 of size 256 next 734
+2025-09-24 13:00:29.658404: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d76000 of size 256 next 837
+2025-09-24 13:00:29.658420: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d76100 of size 256 next 841
+2025-09-24 13:00:29.658435: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d76200 of size 256 next 839
+2025-09-24 13:00:29.658451: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d76300 of size 256 next 840
+2025-09-24 13:00:29.658467: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d76400 of size 256 next 838
+2025-09-24 13:00:29.658482: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d76500 of size 256 next 836
+2025-09-24 13:00:29.658498: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d76600 of size 256 next 835
+2025-09-24 13:00:29.658513: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18d76700 of size 256 next 834
+2025-09-24 13:00:29.658529: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] Free  at 14bb18d76800 of size 395264 next 660
+2025-09-24 13:00:29.658545: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb18dd7000 of size 640000 next 655
+2025-09-24 13:00:29.658561: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] Free  at 14bb18e73400 of size 4160000 next 636
+2025-09-24 13:00:29.658577: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb1926ae00 of size 8000000 next 634
+2025-09-24 13:00:29.658592: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] InUse at 14bb19a0c000 of size 4800000 next 635
+2025-09-24 13:00:29.658608: I external/xla/xla/tsl/framework/bfc_allocator.cc:1105] Free  at 14bb19e9fe00 of size 12628328960 next 18446744073709551615
+2025-09-24 13:00:29.658624: I external/xla/xla/tsl/framework/bfc_allocator.cc:1110]      Summary of in-use Chunks by size: 
+2025-09-24 13:00:29.658644: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 315 Chunks of size 256 totalling 78.8KiB
+2025-09-24 13:00:29.658664: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 126 Chunks of size 512 totalling 63.0KiB
+2025-09-24 13:00:29.658683: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 21 Chunks of size 768 totalling 15.8KiB
+2025-09-24 13:00:29.658702: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 9 Chunks of size 1024 totalling 9.0KiB
+2025-09-24 13:00:29.658721: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 9 Chunks of size 1280 totalling 11.2KiB
+2025-09-24 13:00:29.658740: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 30 Chunks of size 1536 totalling 45.0KiB
+2025-09-24 13:00:29.658759: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 2 Chunks of size 2304 totalling 4.5KiB
+2025-09-24 13:00:29.658778: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 4 Chunks of size 2560 totalling 10.0KiB
+2025-09-24 13:00:29.658796: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 4 Chunks of size 2816 totalling 11.0KiB
+2025-09-24 13:00:29.658815: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 2 Chunks of size 7680 totalling 15.0KiB
+2025-09-24 13:00:29.658834: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 9 Chunks of size 8192 totalling 72.0KiB
+2025-09-24 13:00:29.658862: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 11776 totalling 11.5KiB
+2025-09-24 13:00:29.658883: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 12800 totalling 12.5KiB
+2025-09-24 13:00:29.658902: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 15616 totalling 15.2KiB
+2025-09-24 13:00:29.658921: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 16384 totalling 16.0KiB
+2025-09-24 13:00:29.658939: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 16896 totalling 16.5KiB
+2025-09-24 13:00:29.658958: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 3 Chunks of size 25600 totalling 75.0KiB
+2025-09-24 13:00:29.658977: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 40 Chunks of size 32000 totalling 1.22MiB
+2025-09-24 13:00:29.658995: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 32768 totalling 32.0KiB
+2025-09-24 13:00:29.659014: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 49152 totalling 48.0KiB
+2025-09-24 13:00:29.659033: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 57344 totalling 56.0KiB
+2025-09-24 13:00:29.659051: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 39 Chunks of size 64000 totalling 2.38MiB
+2025-09-24 13:00:29.659070: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 4 Chunks of size 65536 totalling 256.0KiB
+2025-09-24 13:00:29.659088: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 26 Chunks of size 96000 totalling 2.38MiB
+2025-09-24 13:00:29.659107: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 98304 totalling 96.0KiB
+2025-09-24 13:00:29.659126: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 6 Chunks of size 128000 totalling 750.0KiB
+2025-09-24 13:00:29.659145: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 5 Chunks of size 131072 totalling 640.0KiB
+2025-09-24 13:00:29.659164: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 147456 totalling 144.0KiB
+2025-09-24 13:00:29.659182: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 3 Chunks of size 153600 totalling 450.0KiB
+2025-09-24 13:00:29.659201: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 160000 totalling 156.2KiB
+2025-09-24 13:00:29.659220: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 8 Chunks of size 163840 totalling 1.25MiB
+2025-09-24 13:00:29.659238: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 2 Chunks of size 192000 totalling 375.0KiB
+2025-09-24 13:00:29.659257: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 61 Chunks of size 196608 totalling 11.44MiB
+2025-09-24 13:00:29.659275: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 17 Chunks of size 212992 totalling 3.45MiB
+2025-09-24 13:00:29.659301: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 221184 totalling 216.0KiB
+2025-09-24 13:00:29.659321: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 224000 totalling 218.8KiB
+2025-09-24 13:00:29.659340: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 3 Chunks of size 247808 totalling 726.0KiB
+2025-09-24 13:00:29.659359: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 262144 totalling 256.0KiB
+2025-09-24 13:00:29.659378: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 294912 totalling 288.0KiB
+2025-09-24 13:00:29.659396: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 327680 totalling 320.0KiB
+2025-09-24 13:00:29.659415: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 376832 totalling 368.0KiB
+2025-09-24 13:00:29.659434: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 384000 totalling 375.0KiB
+2025-09-24 13:00:29.659453: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 401408 totalling 392.0KiB
+2025-09-24 13:00:29.659482: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 2 Chunks of size 516096 totalling 1008.0KiB
+2025-09-24 13:00:29.659503: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 8 Chunks of size 589824 totalling 4.50MiB
+2025-09-24 13:00:29.659522: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 5 Chunks of size 638976 totalling 3.05MiB
+2025-09-24 13:00:29.659540: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 17 Chunks of size 640000 totalling 10.38MiB
+2025-09-24 13:00:29.659559: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 704000 totalling 687.5KiB
+2025-09-24 13:00:29.659578: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 2 Chunks of size 832000 totalling 1.59MiB
+2025-09-24 13:00:29.659596: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 2 Chunks of size 835584 totalling 1.59MiB
+2025-09-24 13:00:29.659615: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 851968 totalling 832.0KiB
+2025-09-24 13:00:29.659634: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 2 Chunks of size 864000 totalling 1.65MiB
+2025-09-24 13:00:29.659652: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 7 Chunks of size 1277952 totalling 8.53MiB
+2025-09-24 13:00:29.659671: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 1662976 totalling 1.59MiB
+2025-09-24 13:00:29.659689: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 2 Chunks of size 1916928 totalling 3.66MiB
+2025-09-24 13:00:29.659708: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 2 Chunks of size 2129920 totalling 4.06MiB
+2025-09-24 13:00:29.659726: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 2 Chunks of size 2496000 totalling 4.76MiB
+2025-09-24 13:00:29.659744: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 2716672 totalling 2.59MiB
+2025-09-24 13:00:29.659763: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 2 Chunks of size 3328000 totalling 6.35MiB
+2025-09-24 13:00:29.659781: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 4259840 totalling 4.06MiB
+2025-09-24 13:00:29.659799: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 2 Chunks of size 4800000 totalling 9.16MiB
+2025-09-24 13:00:29.659818: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 2 Chunks of size 5242880 totalling 10.00MiB
+2025-09-24 13:00:29.659836: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 5505024 totalling 5.25MiB
+2025-09-24 13:00:29.659855: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 2 Chunks of size 5537792 totalling 10.56MiB
+2025-09-24 13:00:29.659874: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 2 Chunks of size 8000000 totalling 15.26MiB
+2025-09-24 13:00:29.659893: I external/xla/xla/tsl/framework/bfc_allocator.cc:1113] 1 Chunks of size 15335424 totalling 14.62MiB
+2025-09-24 13:00:29.659912: I external/xla/xla/tsl/framework/bfc_allocator.cc:1117] Sum Total of in-use chunks: 154.28MiB
+2025-09-24 13:00:29.659930: I external/xla/xla/tsl/framework/bfc_allocator.cc:1119] Total bytes in pool: 12794658816 memory_limit_: 12794658816 available bytes: 0 curr_region_allocation_bytes_: 25589317632
+2025-09-24 13:00:29.659962: I external/xla/xla/tsl/framework/bfc_allocator.cc:1124] Stats: 
+Limit:                     12794658816
+InUse:                       161774592
+MaxInUse:                    610345472
+NumAllocs:                      971107
+MaxAllocSize:                479022080
+Reserved:                            0
+PeakReserved:                        0
+LargestFreeBlock:                    0
+
+2025-09-24 13:00:29.660021: W external/xla/xla/tsl/framework/bfc_allocator.cc:512] **__________________________________________________________________________________________________
+E0924 13:00:29.660121 2275245 pjrt_stream_executor_client.cc:3008] Execution of replica 0 failed: RESOURCE_EXHAUSTED: Out of memory while trying to allocate 159414737256 bytes. [tf-allocator-allocation-error='']
+Closing CPU stats monitor
