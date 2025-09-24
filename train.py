@@ -1766,7 +1766,7 @@ if __name__ == "__main__":
         ZbotWalkingTaskConfig(
             # Training parameters - Optimized for A100/H100 40GB VRAM
             num_envs=512,
-            batch_size=64,
+            batch_size=32,
             learning_rate=1e-3,
             num_passes=4,
             #epochs_per_log_step=1,
