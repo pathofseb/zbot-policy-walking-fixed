@@ -1,6 +1,6 @@
 Running from directory: /cluster/work/sebasrb/zbot-policy-walking-fixed
 Job name: ksim-zbot-train
-Job ID: 23080101
+Job ID: 23080178
 Node(s): idun-09-10
 Requirement already satisfied: ksim in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 4)) (0.2.10)
 Requirement already satisfied: xax in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 5)) (0.4.3)
