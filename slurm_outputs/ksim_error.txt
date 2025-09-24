@@ -1,6 +1,24 @@
+2025-09-24 11:26:02.864347: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:467] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+WARNING: All log messages before absl::InitializeLog() is called are written to STDERR
+E0000 00:00:1758705962.889042 1089641 cuda_dnn.cc:8579] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+E0000 00:00:1758705962.897313 1089641 cuda_blas.cc:1407] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+W0000 00:00:1758705962.919368 1089641 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758705962.919413 1089641 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758705962.919429 1089641 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+W0000 00:00:1758705962.919442 1089641 computation_placer.cc:177] computation placer already registered. Please check linkage and avoid linking the same target more than once.
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:888: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_inputs: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:889: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_outputs: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:890: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  num_mixtures: int = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:891: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  min_std: float = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:892: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  max_std: float = eqx.static_field()
+/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py:893: UserWarning: `equinox.static_field` is deprecated in favour of `equinox.field(static=True)`
+  var_scale: float = eqx.static_field()
 Traceback (most recent call last):
-  File "<frozen runpy>", line 198, in _run_module_as_main
-  File "<frozen runpy>", line 88, in _run_code
-  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py", line 10, in <module>
-    import distrax
-ModuleNotFoundError: No module named 'distrax'
+  File "/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py", line 1766, in <module>
+    ZbotWalkingTaskConfig(
+TypeError: ZbotWalkingTaskConfig.__init__() got an unexpected keyword argument 'render_full_every_n_seconds'
