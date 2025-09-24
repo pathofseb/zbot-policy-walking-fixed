@@ -1,0 +1,395 @@
+Running from directory: /cluster/work/sebasrb/zbot-policy-walking-fixed
+Job name: ksim-zbot-train
+Job ID: 23081913
+Node(s): idun-01-03
+Requirement already satisfied: ksim in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 4)) (0.2.10)
+Requirement already satisfied: xax in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 5)) (0.4.3)
+Requirement already satisfied: mujoco-scenes in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 6)) (0.0.16)
+Requirement already satisfied: distrax in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 7)) (0.1.7)
+Requirement already satisfied: warp-lang in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 8)) (1.9.0)
+Requirement already satisfied: kinfer[jax] in ./ksim-env/lib/python3.11/site-packages (from -r requirements.txt (line 11)) (0.5.6)
+Requirement already satisfied: numpy in ./ksim-env/lib/python3.11/site-packages (from ksim->-r requirements.txt (line 4)) (1.26.4)
+Requirement already satisfied: matplotlib in ./ksim-env/lib/python3.11/site-packages (from ksim->-r requirements.txt (line 4)) (3.10.6)
+Requirement already satisfied: tqdm in ./ksim-env/lib/python3.11/site-packages (from ksim->-r requirements.txt (line 4)) (4.67.1)
+Requirement already satisfied: tabulate in ./ksim-env/lib/python3.11/site-packages (from ksim->-r requirements.txt (line 4)) (0.9.0)
+Requirement already satisfied: kscale in ./ksim-env/lib/python3.11/site-packages (from ksim->-r requirements.txt (line 4)) (0.3.18)
+Requirement already satisfied: jax in ./ksim-env/lib/python3.11/site-packages (from ksim->-r requirements.txt (line 4)) (0.7.1)
+Requirement already satisfied: mediapy in ./ksim-env/lib/python3.11/site-packages (from ksim->-r requirements.txt (line 4)) (1.2.4)
+Requirement already satisfied: optax in ./ksim-env/lib/python3.11/site-packages (from ksim->-r requirements.txt (line 4)) (0.2.6)
+Requirement already satisfied: scipy in ./ksim-env/lib/python3.11/site-packages (from ksim->-r requirements.txt (line 4)) (1.16.2)
+Requirement already satisfied: mujoco in ./ksim-env/lib/python3.11/site-packages (from ksim->-r requirements.txt (line 4)) (3.3.6)
+Requirement already satisfied: mujoco-mjx in ./ksim-env/lib/python3.11/site-packages (from ksim->-r requirements.txt (line 4)) (3.3.6)
+Requirement already satisfied: kmv in ./ksim-env/lib/python3.11/site-packages (from ksim->-r requirements.txt (line 4)) (0.3.21)
+Requirement already satisfied: bvhio in ./ksim-env/lib/python3.11/site-packages (from ksim->-r requirements.txt (line 4)) (1.5.3)
+Requirement already satisfied: pyglm in ./ksim-env/lib/python3.11/site-packages (from ksim->-r requirements.txt (line 4)) (2.8.2)
+Requirement already satisfied: attrs in ./ksim-env/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (25.3.0)
+Requirement already satisfied: chex in ./ksim-env/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (0.1.91)
+Requirement already satisfied: dpshdl in ./ksim-env/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (0.0.21)
+Requirement already satisfied: equinox in ./ksim-env/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (0.13.0)
+Requirement already satisfied: importlib-resources in ./ksim-env/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (6.5.2)
+Requirement already satisfied: jaxtyping in ./ksim-env/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (0.3.2)
+Requirement already satisfied: orbax-checkpoint in ./ksim-env/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (0.11.25)
+Requirement already satisfied: pillow in ./ksim-env/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (11.3.0)
+Requirement already satisfied: omegaconf in ./ksim-env/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (2.3.0)
+Requirement already satisfied: gitpython in ./ksim-env/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (3.1.45)
+Requirement already satisfied: tensorboard in ./ksim-env/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (2.19.0)
+Requirement already satisfied: psutil in ./ksim-env/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (7.1.0)
+Requirement already satisfied: requests in ./ksim-env/lib/python3.11/site-packages (from xax->-r requirements.txt (line 5)) (2.32.5)
+Requirement already satisfied: etils in ./ksim-env/lib/python3.11/site-packages (from mujoco-scenes->-r requirements.txt (line 6)) (1.13.0)
+Requirement already satisfied: absl-py>=2.3.1 in ./ksim-env/lib/python3.11/site-packages (from distrax->-r requirements.txt (line 7)) (2.3.1)
+Requirement already satisfied: jaxlib>=0.7.0 in ./ksim-env/lib/python3.11/site-packages (from distrax->-r requirements.txt (line 7)) (0.7.1)
+Requirement already satisfied: tfp-nightly in ./ksim-env/lib/python3.11/site-packages (from distrax->-r requirements.txt (line 7)) (0.26.0.dev20250924)
+Requirement already satisfied: onnx in ./ksim-env/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 11)) (1.17.0)
+Requirement already satisfied: onnxruntime==1.20.0 in ./ksim-env/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 11)) (1.20.0)
+Requirement already satisfied: tensorflow in ./ksim-env/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 11)) (2.19.1)
+Requirement already satisfied: tf2onnx>=1.16.0 in ./ksim-env/lib/python3.11/site-packages (from kinfer[jax]->-r requirements.txt (line 11)) (1.16.1)
+Requirement already satisfied: coloredlogs in ./ksim-env/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 11)) (15.0.1)
+Requirement already satisfied: flatbuffers in ./ksim-env/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 11)) (25.9.23)
+Requirement already satisfied: packaging in ./ksim-env/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 11)) (25.0)
+Requirement already satisfied: protobuf in ./ksim-env/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 11)) (3.20.3)
+Requirement already satisfied: sympy in ./ksim-env/lib/python3.11/site-packages (from onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 11)) (1.14.0)
+Requirement already satisfied: typing_extensions>=4.15.0 in ./ksim-env/lib/python3.11/site-packages (from chex->xax->-r requirements.txt (line 5)) (4.15.0)
+Requirement already satisfied: toolz>=1.0.0 in ./ksim-env/lib/python3.11/site-packages (from chex->xax->-r requirements.txt (line 5)) (1.0.0)
+Requirement already satisfied: ml_dtypes>=0.5.0 in ./ksim-env/lib/python3.11/site-packages (from jax->ksim->-r requirements.txt (line 4)) (0.5.3)
+Requirement already satisfied: opt_einsum in ./ksim-env/lib/python3.11/site-packages (from jax->ksim->-r requirements.txt (line 4)) (3.4.0)
+Requirement already satisfied: six in ./ksim-env/lib/python3.11/site-packages (from tf2onnx>=1.16.0->kinfer[jax]->-r requirements.txt (line 11)) (1.17.0)
+Requirement already satisfied: spatial-transform==1.3.1 in ./ksim-env/lib/python3.11/site-packages (from bvhio->ksim->-r requirements.txt (line 4)) (1.3.1)
+Requirement already satisfied: humanfriendly>=9.1 in ./ksim-env/lib/python3.11/site-packages (from coloredlogs->onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 11)) (10.0)
+Requirement already satisfied: wadler-lindig>=0.1.0 in ./ksim-env/lib/python3.11/site-packages (from equinox->xax->-r requirements.txt (line 5)) (0.1.7)
+Requirement already satisfied: gitdb<5,>=4.0.1 in ./ksim-env/lib/python3.11/site-packages (from gitpython->xax->-r requirements.txt (line 5)) (4.0.12)
+Requirement already satisfied: smmap<6,>=3.0.1 in ./ksim-env/lib/python3.11/site-packages (from gitdb<5,>=4.0.1->gitpython->xax->-r requirements.txt (line 5)) (5.0.2)
+Requirement already satisfied: PySide6==6.9.0 in ./ksim-env/lib/python3.11/site-packages (from kmv->ksim->-r requirements.txt (line 4)) (6.9.0)
+Requirement already satisfied: pyqtgraph in ./ksim-env/lib/python3.11/site-packages (from kmv->ksim->-r requirements.txt (line 4)) (0.13.7)
+Requirement already satisfied: colorlogging in ./ksim-env/lib/python3.11/site-packages (from kmv->ksim->-r requirements.txt (line 4)) (0.0.2)
+Requirement already satisfied: shiboken6==6.9.0 in ./ksim-env/lib/python3.11/site-packages (from PySide6==6.9.0->kmv->ksim->-r requirements.txt (line 4)) (6.9.0)
+Requirement already satisfied: PySide6-Essentials==6.9.0 in ./ksim-env/lib/python3.11/site-packages (from PySide6==6.9.0->kmv->ksim->-r requirements.txt (line 4)) (6.9.0)
+Requirement already satisfied: PySide6-Addons==6.9.0 in ./ksim-env/lib/python3.11/site-packages (from PySide6==6.9.0->kmv->ksim->-r requirements.txt (line 4)) (6.9.0)
+Requirement already satisfied: email_validator in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim->-r requirements.txt (line 4)) (2.3.0)
+Requirement already satisfied: aiohttp in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim->-r requirements.txt (line 4)) (3.12.15)
+Requirement already satisfied: cryptography in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim->-r requirements.txt (line 4)) (46.0.1)
+Requirement already satisfied: httpx in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim->-r requirements.txt (line 4)) (0.28.1)
+Requirement already satisfied: pydantic in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim->-r requirements.txt (line 4)) (2.11.9)
+Requirement already satisfied: pyjwt in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim->-r requirements.txt (line 4)) (2.10.1)
+Requirement already satisfied: yarl in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim->-r requirements.txt (line 4)) (1.20.1)
+Requirement already satisfied: aiofiles in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim->-r requirements.txt (line 4)) (24.1.0)
+Requirement already satisfied: click in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim->-r requirements.txt (line 4)) (8.3.0)
+Requirement already satisfied: async-lru in ./ksim-env/lib/python3.11/site-packages (from kscale->ksim->-r requirements.txt (line 4)) (2.0.5)
+Requirement already satisfied: aiohappyeyeballs>=2.5.0 in ./ksim-env/lib/python3.11/site-packages (from aiohttp->kscale->ksim->-r requirements.txt (line 4)) (2.6.1)
+Requirement already satisfied: aiosignal>=1.4.0 in ./ksim-env/lib/python3.11/site-packages (from aiohttp->kscale->ksim->-r requirements.txt (line 4)) (1.4.0)
+Requirement already satisfied: frozenlist>=1.1.1 in ./ksim-env/lib/python3.11/site-packages (from aiohttp->kscale->ksim->-r requirements.txt (line 4)) (1.7.0)
+Requirement already satisfied: multidict<7.0,>=4.5 in ./ksim-env/lib/python3.11/site-packages (from aiohttp->kscale->ksim->-r requirements.txt (line 4)) (6.6.4)
+Requirement already satisfied: propcache>=0.2.0 in ./ksim-env/lib/python3.11/site-packages (from aiohttp->kscale->ksim->-r requirements.txt (line 4)) (0.3.2)
+Requirement already satisfied: idna>=2.0 in ./ksim-env/lib/python3.11/site-packages (from yarl->kscale->ksim->-r requirements.txt (line 4)) (3.10)
+Requirement already satisfied: cffi>=2.0.0 in ./ksim-env/lib/python3.11/site-packages (from cryptography->kscale->ksim->-r requirements.txt (line 4)) (2.0.0)
+Requirement already satisfied: pycparser in ./ksim-env/lib/python3.11/site-packages (from cffi>=2.0.0->cryptography->kscale->ksim->-r requirements.txt (line 4)) (2.23)
+Requirement already satisfied: dnspython>=2.0.0 in ./ksim-env/lib/python3.11/site-packages (from email_validator->kscale->ksim->-r requirements.txt (line 4)) (2.8.0)
+Requirement already satisfied: anyio in ./ksim-env/lib/python3.11/site-packages (from httpx->kscale->ksim->-r requirements.txt (line 4)) (4.11.0)
+Requirement already satisfied: certifi in ./ksim-env/lib/python3.11/site-packages (from httpx->kscale->ksim->-r requirements.txt (line 4)) (2025.8.3)
+Requirement already satisfied: httpcore==1.* in ./ksim-env/lib/python3.11/site-packages (from httpx->kscale->ksim->-r requirements.txt (line 4)) (1.0.9)
+Requirement already satisfied: h11>=0.16 in ./ksim-env/lib/python3.11/site-packages (from httpcore==1.*->httpx->kscale->ksim->-r requirements.txt (line 4)) (0.16.0)
+Requirement already satisfied: sniffio>=1.1 in ./ksim-env/lib/python3.11/site-packages (from anyio->httpx->kscale->ksim->-r requirements.txt (line 4)) (1.3.1)
+Requirement already satisfied: contourpy>=1.0.1 in ./ksim-env/lib/python3.11/site-packages (from matplotlib->ksim->-r requirements.txt (line 4)) (1.3.3)
+Requirement already satisfied: cycler>=0.10 in ./ksim-env/lib/python3.11/site-packages (from matplotlib->ksim->-r requirements.txt (line 4)) (0.12.1)
+Requirement already satisfied: fonttools>=4.22.0 in ./ksim-env/lib/python3.11/site-packages (from matplotlib->ksim->-r requirements.txt (line 4)) (4.60.0)
+Requirement already satisfied: kiwisolver>=1.3.1 in ./ksim-env/lib/python3.11/site-packages (from matplotlib->ksim->-r requirements.txt (line 4)) (1.4.9)
+Requirement already satisfied: pyparsing>=2.3.1 in ./ksim-env/lib/python3.11/site-packages (from matplotlib->ksim->-r requirements.txt (line 4)) (3.2.5)
+Requirement already satisfied: python-dateutil>=2.7 in ./ksim-env/lib/python3.11/site-packages (from matplotlib->ksim->-r requirements.txt (line 4)) (2.9.0.post0)
+Requirement already satisfied: ipython in ./ksim-env/lib/python3.11/site-packages (from mediapy->ksim->-r requirements.txt (line 4)) (9.5.0)
+Requirement already satisfied: decorator in ./ksim-env/lib/python3.11/site-packages (from ipython->mediapy->ksim->-r requirements.txt (line 4)) (5.2.1)
+Requirement already satisfied: ipython-pygments-lexers in ./ksim-env/lib/python3.11/site-packages (from ipython->mediapy->ksim->-r requirements.txt (line 4)) (1.1.1)
+Requirement already satisfied: jedi>=0.16 in ./ksim-env/lib/python3.11/site-packages (from ipython->mediapy->ksim->-r requirements.txt (line 4)) (0.19.2)
+Requirement already satisfied: matplotlib-inline in ./ksim-env/lib/python3.11/site-packages (from ipython->mediapy->ksim->-r requirements.txt (line 4)) (0.1.7)
+Requirement already satisfied: pexpect>4.3 in ./ksim-env/lib/python3.11/site-packages (from ipython->mediapy->ksim->-r requirements.txt (line 4)) (4.9.0)
+Requirement already satisfied: prompt_toolkit<3.1.0,>=3.0.41 in ./ksim-env/lib/python3.11/site-packages (from ipython->mediapy->ksim->-r requirements.txt (line 4)) (3.0.52)
+Requirement already satisfied: pygments>=2.4.0 in ./ksim-env/lib/python3.11/site-packages (from ipython->mediapy->ksim->-r requirements.txt (line 4)) (2.19.2)
+Requirement already satisfied: stack_data in ./ksim-env/lib/python3.11/site-packages (from ipython->mediapy->ksim->-r requirements.txt (line 4)) (0.6.3)
+Requirement already satisfied: traitlets>=5.13.0 in ./ksim-env/lib/python3.11/site-packages (from ipython->mediapy->ksim->-r requirements.txt (line 4)) (5.14.3)
+Requirement already satisfied: wcwidth in ./ksim-env/lib/python3.11/site-packages (from prompt_toolkit<3.1.0,>=3.0.41->ipython->mediapy->ksim->-r requirements.txt (line 4)) (0.2.14)
+Requirement already satisfied: parso<0.9.0,>=0.8.4 in ./ksim-env/lib/python3.11/site-packages (from jedi>=0.16->ipython->mediapy->ksim->-r requirements.txt (line 4)) (0.8.5)
+Requirement already satisfied: ptyprocess>=0.5 in ./ksim-env/lib/python3.11/site-packages (from pexpect>4.3->ipython->mediapy->ksim->-r requirements.txt (line 4)) (0.7.0)
+Requirement already satisfied: glfw in ./ksim-env/lib/python3.11/site-packages (from mujoco->ksim->-r requirements.txt (line 4)) (2.10.0)
+Requirement already satisfied: pyopengl in ./ksim-env/lib/python3.11/site-packages (from mujoco->ksim->-r requirements.txt (line 4)) (3.1.10)
+Requirement already satisfied: fsspec in ./ksim-env/lib/python3.11/site-packages (from etils[epath]->mujoco->ksim->-r requirements.txt (line 4)) (2025.9.0)
+Requirement already satisfied: zipp in ./ksim-env/lib/python3.11/site-packages (from etils[epath]->mujoco->ksim->-r requirements.txt (line 4)) (3.23.0)
+Requirement already satisfied: trimesh in ./ksim-env/lib/python3.11/site-packages (from mujoco-mjx->ksim->-r requirements.txt (line 4)) (4.8.2)
+Requirement already satisfied: antlr4-python3-runtime==4.9.* in ./ksim-env/lib/python3.11/site-packages (from omegaconf->xax->-r requirements.txt (line 5)) (4.9.3)
+Requirement already satisfied: PyYAML>=5.1.0 in ./ksim-env/lib/python3.11/site-packages (from omegaconf->xax->-r requirements.txt (line 5)) (6.0.2)
+Requirement already satisfied: msgpack in ./ksim-env/lib/python3.11/site-packages (from orbax-checkpoint->xax->-r requirements.txt (line 5)) (1.1.1)
+Requirement already satisfied: tensorstore>=0.1.71 in ./ksim-env/lib/python3.11/site-packages (from orbax-checkpoint->xax->-r requirements.txt (line 5)) (0.1.77)
+Requirement already satisfied: nest_asyncio in ./ksim-env/lib/python3.11/site-packages (from orbax-checkpoint->xax->-r requirements.txt (line 5)) (1.6.0)
+Requirement already satisfied: humanize in ./ksim-env/lib/python3.11/site-packages (from orbax-checkpoint->xax->-r requirements.txt (line 5)) (4.13.0)
+Requirement already satisfied: simplejson>=3.16.0 in ./ksim-env/lib/python3.11/site-packages (from orbax-checkpoint->xax->-r requirements.txt (line 5)) (3.20.1)
+Requirement already satisfied: annotated-types>=0.6.0 in ./ksim-env/lib/python3.11/site-packages (from pydantic->kscale->ksim->-r requirements.txt (line 4)) (0.7.0)
+Requirement already satisfied: pydantic-core==2.33.2 in ./ksim-env/lib/python3.11/site-packages (from pydantic->kscale->ksim->-r requirements.txt (line 4)) (2.33.2)
+Requirement already satisfied: typing-inspection>=0.4.0 in ./ksim-env/lib/python3.11/site-packages (from pydantic->kscale->ksim->-r requirements.txt (line 4)) (0.4.1)
+Requirement already satisfied: charset_normalizer<4,>=2 in ./ksim-env/lib/python3.11/site-packages (from requests->xax->-r requirements.txt (line 5)) (3.4.3)
+Requirement already satisfied: urllib3<3,>=1.21.1 in ./ksim-env/lib/python3.11/site-packages (from requests->xax->-r requirements.txt (line 5)) (2.5.0)
+Requirement already satisfied: executing>=1.2.0 in ./ksim-env/lib/python3.11/site-packages (from stack_data->ipython->mediapy->ksim->-r requirements.txt (line 4)) (2.2.1)
+Requirement already satisfied: asttokens>=2.1.0 in ./ksim-env/lib/python3.11/site-packages (from stack_data->ipython->mediapy->ksim->-r requirements.txt (line 4)) (3.0.0)
+Requirement already satisfied: pure-eval in ./ksim-env/lib/python3.11/site-packages (from stack_data->ipython->mediapy->ksim->-r requirements.txt (line 4)) (0.2.3)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in ./ksim-env/lib/python3.11/site-packages (from sympy->onnxruntime==1.20.0->kinfer[jax]->-r requirements.txt (line 11)) (1.3.0)
+Requirement already satisfied: grpcio>=1.48.2 in ./ksim-env/lib/python3.11/site-packages (from tensorboard->xax->-r requirements.txt (line 5)) (1.75.0)
+Requirement already satisfied: markdown>=2.6.8 in ./ksim-env/lib/python3.11/site-packages (from tensorboard->xax->-r requirements.txt (line 5)) (3.9)
+Requirement already satisfied: setuptools>=41.0.0 in ./ksim-env/lib/python3.11/site-packages (from tensorboard->xax->-r requirements.txt (line 5)) (78.1.1)
+Requirement already satisfied: tensorboard-data-server<0.8.0,>=0.7.0 in ./ksim-env/lib/python3.11/site-packages (from tensorboard->xax->-r requirements.txt (line 5)) (0.7.2)
+Requirement already satisfied: werkzeug>=1.0.1 in ./ksim-env/lib/python3.11/site-packages (from tensorboard->xax->-r requirements.txt (line 5)) (3.1.3)
+Requirement already satisfied: MarkupSafe>=2.1.1 in ./ksim-env/lib/python3.11/site-packages (from werkzeug>=1.0.1->tensorboard->xax->-r requirements.txt (line 5)) (3.0.2)
+Requirement already satisfied: astunparse>=1.6.0 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 11)) (1.6.3)
+Requirement already satisfied: gast!=0.5.0,!=0.5.1,!=0.5.2,>=0.2.1 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 11)) (0.6.0)
+Requirement already satisfied: google-pasta>=0.1.1 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 11)) (0.2.0)
+Requirement already satisfied: libclang>=13.0.0 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 11)) (18.1.1)
+Requirement already satisfied: termcolor>=1.1.0 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 11)) (3.1.0)
+Requirement already satisfied: wrapt>=1.11.0 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 11)) (1.17.3)
+Requirement already satisfied: keras>=3.5.0 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 11)) (3.11.3)
+Requirement already satisfied: h5py>=3.11.0 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 11)) (3.14.0)
+Requirement already satisfied: tensorflow-io-gcs-filesystem>=0.23.1 in ./ksim-env/lib/python3.11/site-packages (from tensorflow->kinfer[jax]->-r requirements.txt (line 11)) (0.37.1)
+Requirement already satisfied: wheel<1.0,>=0.23.0 in ./ksim-env/lib/python3.11/site-packages (from astunparse>=1.6.0->tensorflow->kinfer[jax]->-r requirements.txt (line 11)) (0.45.1)
+Requirement already satisfied: rich in ./ksim-env/lib/python3.11/site-packages (from keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 11)) (14.1.0)
+Requirement already satisfied: namex in ./ksim-env/lib/python3.11/site-packages (from keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 11)) (0.1.0)
+Requirement already satisfied: optree in ./ksim-env/lib/python3.11/site-packages (from keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 11)) (0.17.0)
+Requirement already satisfied: markdown-it-py>=2.2.0 in ./ksim-env/lib/python3.11/site-packages (from rich->keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 11)) (4.0.0)
+Requirement already satisfied: mdurl~=0.1 in ./ksim-env/lib/python3.11/site-packages (from markdown-it-py>=2.2.0->rich->keras>=3.5.0->tensorflow->kinfer[jax]->-r requirements.txt (line 11)) (0.1.2)
+Requirement already satisfied: cloudpickle>=1.3 in ./ksim-env/lib/python3.11/site-packages (from tfp-nightly->distrax->-r requirements.txt (line 7)) (3.1.1)
+Requirement already satisfied: dm-tree in ./ksim-env/lib/python3.11/site-packages (from tfp-nightly->distrax->-r requirements.txt (line 7)) (0.1.9)
+Requirement already satisfied: jax[cuda12] in ./ksim-env/lib/python3.11/site-packages (0.7.1)
+Requirement already satisfied: jaxlib<=0.7.1,>=0.7.1 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (0.7.1)
+Requirement already satisfied: ml_dtypes>=0.5.0 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (0.5.3)
+Requirement already satisfied: numpy>=1.26 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (1.26.4)
+Requirement already satisfied: opt_einsum in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (3.4.0)
+Requirement already satisfied: scipy>=1.12 in ./ksim-env/lib/python3.11/site-packages (from jax[cuda12]) (1.16.2)
+Requirement already satisfied: jax-cuda12-plugin<=0.7.1,>=0.7.1 in ./ksim-env/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (0.7.1)
+Requirement already satisfied: jax-cuda12-pjrt==0.7.1 in ./ksim-env/lib/python3.11/site-packages (from jax-cuda12-plugin<=0.7.1,>=0.7.1->jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (0.7.1)
+Requirement already satisfied: nvidia-cublas-cu12>=12.1.3.1 in ./ksim-env/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.1.4)
+Requirement already satisfied: nvidia-cuda-cupti-cu12>=12.1.105 in ./ksim-env/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.79)
+Requirement already satisfied: nvidia-cuda-nvcc-cu12>=12.6.85 in ./ksim-env/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.86)
+Requirement already satisfied: nvidia-cuda-runtime-cu12>=12.1.105 in ./ksim-env/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.79)
+Requirement already satisfied: nvidia-cudnn-cu12<10.0,>=9.8 in ./ksim-env/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (9.13.0.50)
+Requirement already satisfied: nvidia-cufft-cu12>=11.0.2.54 in ./ksim-env/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (11.4.1.4)
+Requirement already satisfied: nvidia-cusolver-cu12>=11.4.5.107 in ./ksim-env/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (11.7.5.82)
+Requirement already satisfied: nvidia-cusparse-cu12>=12.1.0.106 in ./ksim-env/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.5.10.65)
+Requirement already satisfied: nvidia-nccl-cu12>=2.18.1 in ./ksim-env/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (2.28.3)
+Requirement already satisfied: nvidia-nvjitlink-cu12>=12.1.105 in ./ksim-env/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.86)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12>=12.1.55 in ./ksim-env/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (12.9.86)
+Requirement already satisfied: nvidia-nvshmem-cu12>=3.2.5 in ./ksim-env/lib/python3.11/site-packages (from jax-cuda12-plugin[with-cuda]<=0.7.1,>=0.7.1; extra == "cuda12"->jax[cuda12]) (3.4.5)
+Installed dependencies:
+absl-py==2.3.1
+aiofiles==24.1.0
+aiohappyeyeballs==2.6.1
+aiohttp==3.12.15
+aiosignal==1.4.0
+annotated-types==0.7.0
+antlr4-python3-runtime==4.9.3
+anyio==4.11.0
+asttokens==3.0.0
+astunparse==1.6.3
+async-lru==2.0.5
+attrs==25.3.0
+bvhio==1.5.3
+certifi==2025.8.3
+cffi==2.0.0
+charset-normalizer==3.4.3
+chex==0.1.91
+click==8.3.0
+cloudpickle==3.1.1
+coloredlogs==15.0.1
+colorlogging==0.0.2
+contourpy==1.3.3
+cryptography==46.0.1
+cycler==0.12.1
+decorator==5.2.1
+distrax==0.1.7
+dm-tree==0.1.9
+dnspython==2.8.0
+dpshdl==0.0.21
+email-validator==2.3.0
+equinox==0.13.0
+etils==1.13.0
+executing==2.2.1
+flatbuffers==25.9.23
+fonttools==4.60.0
+frozenlist==1.7.0
+fsspec==2025.9.0
+gast==0.6.0
+gitdb==4.0.12
+GitPython==3.1.45
+glfw==2.10.0
+google-pasta==0.2.0
+grpcio==1.75.0
+h11==0.16.0
+h5py==3.14.0
+httpcore==1.0.9
+httpx==0.28.1
+humanfriendly==10.0
+humanize==4.13.0
+idna==3.10
+importlib_resources==6.5.2
+ipython==9.5.0
+ipython_pygments_lexers==1.1.1
+jax==0.7.1
+jax-cuda12-pjrt==0.7.1
+jax-cuda12-plugin==0.7.1
+jaxlib==0.7.1
+jaxtyping==0.3.2
+jedi==0.19.2
+keras==3.11.3
+kinfer==0.5.6
+kiwisolver==1.4.9
+kmv==0.3.21
+kscale==0.3.18
+ksim==0.2.10
+libclang==18.1.1
+Markdown==3.9
+markdown-it-py==4.0.0
+MarkupSafe==3.0.2
+matplotlib==3.10.6
+matplotlib-inline==0.1.7
+mdurl==0.1.2
+mediapy==1.2.4
+ml_dtypes==0.5.3
+mpmath==1.3.0
+msgpack==1.1.1
+mujoco==3.3.6
+mujoco-mjx==3.3.6
+mujoco-scenes==0.0.16
+multidict==6.6.4
+namex==0.1.0
+nest-asyncio==1.6.0
+numpy==1.26.4
+nvidia-cublas-cu12==12.9.1.4
+nvidia-cuda-cupti-cu12==12.9.79
+nvidia-cuda-nvcc-cu12==12.9.86
+nvidia-cuda-nvrtc-cu12==12.9.86
+nvidia-cuda-runtime-cu12==12.9.79
+nvidia-cudnn-cu12==9.13.0.50
+nvidia-cufft-cu12==11.4.1.4
+nvidia-cusolver-cu12==11.7.5.82
+nvidia-cusparse-cu12==12.5.10.65
+nvidia-nccl-cu12==2.28.3
+nvidia-nvjitlink-cu12==12.9.86
+nvidia-nvshmem-cu12==3.4.5
+omegaconf==2.3.0
+onnx==1.17.0
+onnxruntime==1.20.0
+opt_einsum==3.4.0
+optax==0.2.6
+optree==0.17.0
+orbax-checkpoint==0.11.25
+packaging==25.0
+parso==0.8.5
+pexpect==4.9.0
+pillow==11.3.0
+prompt_toolkit==3.0.52
+propcache==0.3.2
+protobuf==3.20.3
+psutil==7.1.0
+ptyprocess==0.7.0
+pure_eval==0.2.3
+pycparser==2.23
+pydantic==2.11.9
+pydantic_core==2.33.2
+pyglm==2.8.2
+Pygments==2.19.2
+PyJWT==2.10.1
+PyOpenGL==3.1.10
+pyparsing==3.2.5
+pyqtgraph==0.13.7
+PySide6==6.9.0
+PySide6_Addons==6.9.0
+PySide6_Essentials==6.9.0
+python-dateutil==2.9.0.post0
+PyYAML==6.0.2
+requests==2.32.5
+rich==14.1.0
+scipy==1.16.2
+shiboken6==6.9.0
+simplejson==3.20.1
+six==1.17.0
+smmap==5.0.2
+sniffio==1.3.1
+spatial-transform==1.3.1
+stack-data==0.6.3
+sympy==1.14.0
+tabulate==0.9.0
+tensorboard==2.19.0
+tensorboard-data-server==0.7.2
+tensorflow==2.19.1
+tensorflow-io-gcs-filesystem==0.37.1
+tensorstore==0.1.77
+termcolor==3.1.0
+tf2onnx==1.16.1
+tfp-nightly==0.26.0.dev20250924
+toolz==1.0.0
+tqdm==4.67.1
+traitlets==5.14.3
+trimesh==4.8.2
+typing-inspection==0.4.1
+typing_extensions==4.15.0
+urllib3==2.5.0
+wadler_lindig==0.1.7
+warp-lang==1.9.0
+wcwidth==0.2.14
+Werkzeug==3.1.3
+wrapt==1.17.3
+xax==0.4.3
+yarl==1.20.1
+zipp==3.23.0
+Checking JAX backend:
+gpu
+Set MUJOCO_GL=osmesa for headless rendering
+  [1;36mINFO[0m  [90m2025-09-24 14:03:48[0m [[1;34mroot[0m] Single GPU detected, using default device selection
+  [1;36mINFO[0m  [90m2025-09-24 14:03:59[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX logging level to INFO
+  [1;36mINFO[0m  [90m2025-09-24 14:03:59[0m [[1;34mxax.task.mixins.compile[0m] Setting JAX compilation cache directory to /cluster/home/sebasrb/.cache/jax/jaxcache
+  [1;36mINFO[0m  [90m2025-09-24 14:03:59[0m [[1;34mxax.task.mixins.compile[0m] Configuring JAX compilation cache parameters
+ [1;32mSTATUS[0m [90m2025-09-24 14:03:59[0m [[1;34mxax.task.mixins.artifacts[0m] /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008
+ [1;32mSTATUS[0m [90m2025-09-24 14:03:59[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/zbot-policy-walking-fixed/train.py
+{"status": {"message": "/cluster/work/sebasrb/zbot-policy-walking-fixed/train.py", "filename": "train.py", "lineno": 592}}
+ [1;32mSTATUS[0m [90m2025-09-24 14:03:59[0m [[1;34mxax.task.mixins.train[0m] /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008
+{"status": {"message": "/cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008", "filename": "train.py", "lineno": 593}}
+  [1;36mINFO[0m  [90m2025-09-24 14:03:59[0m [[1;34mjax._src.xla_bridge[0m] Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+ [1;32mSTATUS[0m [90m2025-09-24 14:03:59[0m [[1;34mxax.task.mixins.train[0m] JAX devices: [CudaDevice(id=0)]
+{"status": {"message": "JAX devices: [CudaDevice(id=0)]", "filename": "train.py", "lineno": 594}}
+  [1;36mINFO[0m  [90m2025-09-24 14:04:05[0m [[1;34mxax.task.mixins.train[0m] Starting a new training run
+  [1;35mPING[0m  [90m2025-09-24 14:04:07[0m [[1;34mksim.task.rl[0m] Model size: 1,095,597 parameters
+{"ping": {"message": "Model size: 1,095,597 parameters", "filename": "rl.py", "lineno": 2389}}
+  [1;35mPING[0m  [90m2025-09-24 14:04:07[0m [[1;34mksim.task.rl[0m] Optimizer size: 2,191,194 parameters
+{"ping": {"message": "Optimizer size: 2,191,194 parameters", "filename": "rl.py", "lineno": 2390}}
+  [1;36mINFO[0m  [90m2025-09-24 14:04:07[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
+[1;33mWARNING[0m [90m2025-09-24 14:04:08[0m [[1;34mksim.engine[0m] `max_action_latency=0.100000` is greater than `ctrl_dt=0.020000`
+{"ping": {"message": "`max_action_latency=0.100000` is greater than `ctrl_dt=0.020000`", "filename": "engine.py", "lineno": 347}}
+  [1;36mINFO[0m  [90m2025-09-24 14:04:11[0m [[1;34mroot[0m] Using JAX default device: cuda:0.
+{"state": {"num_steps": 2, "num_samples": 4096001, "start_time_s": 1758715392.0, "elapsed_time_s": 0.0, "phase": "valid"}, "train": {"advantages": -0.5442482829093933, "loss_kl": 4.846122465096414e-06, "loss_policy": 0.5421501398086548, "loss_value": 0.07453329116106033, "off_policy_log_probs": -1.1099830865859985, "off_policy_values": -0.8509385585784912, "on_policy_log_probs": -1.1097406148910522, "on_policy_values": -0.6276639699935913, "value_targets": -1.0438718795776367}, "reward": {"_total": -5.268690586090088, "ankle_knee_penalty": -2.8490453019003326e-07, "arm_pose_penalty": -0.28922608494758606, "contact_force_penalty": 0.0, "feet_airtime": -0.06687051802873611, "feet_orientation": 0.049921318888664246, "feet_too_close_penalty": -0.10757886618375778, "reachability_penalty": -5.620190620422363, "simple_single_foot_contact": 0.21187543869018555, "stay_alive": -0.01456154603511095, "straight_leg_penalty": -0.037800341844558716, "upright": 0.6057406067848206}, "termination": {"episode_length": 0.8189461827278137, "mean_terminations": 194.546875, "prct/episode_length": 0.0, "prct/not_upright": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0, "samples/second": 0.0, "dt": 1784.6207311153412}}
+ [1;32mSTATUS[0m [90m2025-09-24 14:34:00[0m [[1;34mroot[0m] Tensorboard: http://idun-01-03:9249/
+{"status": {"message": "Tensorboard: http://idun-01-03:9249/", "filename": "tensorboard.py", "lineno": 129}}
+ [1;32mSTATUS[0m [90m2025-09-24 14:35:30[0m [[1;34mksim.task.rl[0m] Step 1 time: 30m, 42s
+{"state": {"num_steps": 2, "num_samples": 4096001, "start_time_s": 1758715008.0, "elapsed_time_s": 0.0, "phase": "valid"}, "train": {"advantages": -0.5443522930145264, "loss_kl": 4.801612703886349e-06, "loss_policy": 0.5423021912574768, "loss_value": 0.07421891391277313, "off_policy_log_probs": -1.108288049697876, "off_policy_values": -0.8508583903312683, "on_policy_log_probs": -1.1080478429794312, "on_policy_values": -0.6269058585166931, "value_targets": -1.0436737537384033}, "reward": {"_total": -5.25502347946167, "ankle_knee_penalty": -2.8539278673633817e-07, "arm_pose_penalty": -0.29134321212768555, "contact_force_penalty": 0.0, "feet_airtime": -0.06492755562067032, "feet_orientation": 0.04975227639079094, "feet_too_close_penalty": -0.10457727313041687, "reachability_penalty": -5.610093116760254, "simple_single_foot_contact": 0.21254654228687286, "stay_alive": -0.014508530497550964, "straight_leg_penalty": -0.037810444831848145, "upright": 0.6059380769729614}, "termination": {"episode_length": 0.8207317590713501, "mean_terminations": 194.126953125, "prct/episode_length": 0.0, "prct/not_upright": 1.0000001192092896}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0, "samples/second": 0.0, "dt": 2363.99568939209}}
+ [1;32mSTATUS[0m [90m2025-09-24 14:36:38[0m [[1;34mroot[0m] Tensorboard: http://idun-07-05:9249/
+{"status": {"message": "Tensorboard: http://idun-07-05:9249/", "filename": "tensorboard.py", "lineno": 129}}
+ [1;32mSTATUS[0m [90m2025-09-24 14:38:41[0m [[1;34mksim.task.rl[0m] Step 1 time: 40m, 52s
+{"status": {"message": "Step 1 time: 30m, 42s", "filename": "rl.py", "lineno": 2591}}
+  [1;36mINFO[0m  [90m2025-09-24 14:48:32[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008/checkpoints/ckpt.3.bin
+{"state": {"num_steps": 3, "num_samples": 8192001, "start_time_s": 1758715392.0, "elapsed_time_s": 1842.6351318359375, "phase": "train"}, "gpu": {"mem/0": 75.72064395100479, "temp/0": 31.0, "util/0": 0.0}, "cpu": {"child_procs": 6, "percent": 97.9, "child_percent": 0.0}, "mem": {"percent": 1.0731644100666329, "shared": 593821696, "child_percent": 0.017765561203307346, "rss/cur": 23217528832, "rss/total": 25523638272, "vms/cur": 106715508736, "vms/total": 130756624384}, "train": {"advantages": -0.3344332277774811, "loss_kl": 6.1773644119966775e-06, "loss_policy": 0.3299560546875, "loss_value": 0.028063934296369553, "off_policy_log_probs": -1.0990508794784546, "off_policy_values": -0.9575764536857605, "on_policy_log_probs": -1.098742127418518, "on_policy_values": -0.8321310877799988, "value_targets": -1.0437010526657104}, "reward": {"_total": -5.178966522216797, "ankle_knee_penalty": -2.9031963322267984e-07, "arm_pose_penalty": -0.28117889165878296, "contact_force_penalty": 0.0, "feet_airtime": -0.06518042087554932, "feet_orientation": 0.050207484513521194, "feet_too_close_penalty": -0.10062134265899658, "reachability_penalty": -5.546881198883057, "simple_single_foot_contact": 0.21251776814460754, "stay_alive": -0.014969391748309135, "straight_leg_penalty": -0.03735595569014549, "upright": 0.604495644569397}, "termination": {"episode_length": 0.8078804016113281, "mean_terminations": 197.77734375, "prct/episode_length": 0.0, "prct/not_upright": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0, "samples/second": 0.0, "dt": 2673.3094527721405}}
+ [1;32mSTATUS[0m [90m2025-09-24 14:48:33[0m [[1;34mksim.task.rl[0m] Step 2 time: 13m, 2s
+{"status": {"message": "Step 1 time: 40m, 52s", "filename": "rl.py", "lineno": 2591}}
+  [1;36mINFO[0m  [90m2025-09-24 14:56:03[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_007/checkpoints/ckpt.3.bin
+{"state": {"num_steps": 3, "num_samples": 8192001, "start_time_s": 1758715008.0, "elapsed_time_s": 2452.982177734375, "phase": "train"}, "gpu": {"mem/0": 75.29052734375, "temp/0": 28.0, "util/0": 0.0}, "cpu": {"child_procs": 6, "percent": 98.3, "child_percent": 0.0}, "mem": {"percent": 1.1423243885660321, "shared": 584318976, "child_percent": 0.023775133373448123, "rss/cur": 18519363584, "rss/total": 20832018432, "vms/cur": 61034704896, "vms/total": 76516802560}, "train": {"advantages": -0.345115602016449, "loss_kl": 6.106748514866922e-06, "loss_policy": 0.34086287021636963, "loss_value": 0.02815999463200569, "off_policy_log_probs": -1.096530556678772, "off_policy_values": -0.9535636305809021, "on_policy_log_probs": -1.0962252616882324, "on_policy_values": -0.8221843242645264, "value_targets": -1.0424866676330566}, "reward": {"_total": -5.161417007446289, "ankle_knee_penalty": -2.903033475831762e-07, "arm_pose_penalty": -0.2831133008003235, "contact_force_penalty": 0.0, "feet_airtime": -0.06346377730369568, "feet_orientation": 0.04977218806743622, "feet_too_close_penalty": -0.09749878197908401, "reachability_penalty": -5.532163143157959, "simple_single_foot_contact": 0.2132222205400467, "stay_alive": -0.014871993102133274, "straight_leg_penalty": -0.03743693232536316, "upright": 0.6041362881660461}, "termination": {"episode_length": 0.81099534034729, "mean_terminations": 197.005859375, "prct/episode_length": 0.0, "prct/not_upright": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0, "samples/second": 0.0, "dt": 3540.1766867637634}}
+ [1;32mSTATUS[0m [90m2025-09-24 14:56:04[0m [[1;34mksim.task.rl[0m] Step 2 time: 17m, 22s
+{"status": {"message": "Step 2 time: 13m, 2s", "filename": "rl.py", "lineno": 2591}}
+  [1;36mINFO[0m  [90m2025-09-24 15:15:15[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008/checkpoints/ckpt.4.bin
+{"state": {"num_steps": 4, "num_samples": 12288001, "start_time_s": 1758715392.0, "elapsed_time_s": 2624.9453125, "phase": "valid"}, "gpu": {"mem/0": 75.72064395100479, "temp/0": 32.0, "util/0": 99.0}, "cpu": {"child_procs": 6, "percent": 91.7, "child_percent": 0.0}, "mem": {"percent": 0.9038960021026544, "shared": 593821696, "child_percent": 0.018361180739684933, "rss/cur": 19555467264, "rss/total": 21938892800, "vms/cur": 103021936640, "vms/total": 127140528128}, "train": {"advantages": -0.0994720607995987, "loss_kl": 7.882155841798522e-06, "loss_policy": 0.09176419675350189, "loss_value": 0.013309929519891739, "off_policy_log_probs": -1.0887389183044434, "off_policy_values": -0.9976392388343811, "on_policy_log_probs": -1.088344931602478, "on_policy_values": -0.9476003050804138, "value_targets": -1.0189841985702515}, "reward": {"_total": -5.093375205993652, "ankle_knee_penalty": -2.997768149270996e-07, "arm_pose_penalty": -0.269016832113266, "contact_force_penalty": 0.0, "feet_airtime": -0.06618554890155792, "feet_orientation": 0.051128387451171875, "feet_too_close_penalty": -0.0950755625963211, "reachability_penalty": -5.475258827209473, "simple_single_foot_contact": 0.21200881898403168, "stay_alive": -0.01590862311422825, "straight_leg_penalty": -0.036664072424173355, "upright": 0.6015971899032593}, "termination": {"episode_length": 0.7787144184112549, "mean_terminations": 205.216796875, "prct/episode_length": 0.0, "prct/not_upright": 0.9999999403953552}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0016050128410614953, "samples/second": 4930.599861729804, "dt": 2492.2466263771057}}
+ [1;32mSTATUS[0m [90m2025-09-24 15:16:54[0m [[1;34mksim.task.rl[0m] Step 3 time: 28m, 21s
+{"status": {"message": "Step 2 time: 17m, 22s", "filename": "rl.py", "lineno": 2591}}
+  [1;36mINFO[0m  [90m2025-09-24 15:33:17[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_007/checkpoints/ckpt.4.bin
+{"state": {"num_steps": 4, "num_samples": 12288001, "start_time_s": 1758715008.0, "elapsed_time_s": 3495.8720703125, "phase": "valid"}, "gpu": {"mem/0": 75.29052734375, "temp/0": 34.0, "util/0": 100.0}, "cpu": {"child_procs": 6, "percent": 93.1, "child_percent": 0.0}, "mem": {"percent": 1.1340262748437033, "shared": 584318976, "child_percent": 0.024465842784539737, "rss/cur": 18384834560, "rss/total": 20764676096, "vms/cur": 60896165888, "vms/total": 76445605888}, "train": {"advantages": -0.11836422234773636, "loss_kl": 7.616043149027973e-06, "loss_policy": 0.11130598932504654, "loss_value": 0.013492211699485779, "off_policy_log_probs": -1.0865886211395264, "off_policy_values": -0.9958146810531616, "on_policy_log_probs": -1.0862077474594116, "on_policy_values": -0.9280509352684021, "value_targets": -1.0212323665618896}, "reward": {"_total": -5.074006080627441, "ankle_knee_penalty": -3.0127344530228584e-07, "arm_pose_penalty": -0.2715388238430023, "contact_force_penalty": 0.0, "feet_airtime": -0.06268906593322754, "feet_orientation": 0.05033142492175102, "feet_too_close_penalty": -0.09015649557113647, "reachability_penalty": -5.463289737701416, "simple_single_foot_contact": 0.2133818119764328, "stay_alive": -0.01565612480044365, "straight_leg_penalty": -0.03701873868703842, "upright": 0.6026300191879272}, "termination": {"episode_length": 0.7863403558731079, "mean_terminations": 203.216796875, "prct/episode_length": 0.0, "prct/not_upright": 0.9999999403953552}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0011729804048042952, "samples/second": 3603.396103102189, "dt": 3410.1402537822723}}
+ [1;32mSTATUS[0m [90m2025-09-24 15:35:25[0m [[1;34mksim.task.rl[0m] Step 3 time: 39m, 21s
+{"status": {"message": "Step 3 time: 28m, 21s", "filename": "rl.py", "lineno": 2591}}
+  [1;36mINFO[0m  [90m2025-09-24 15:42:46[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008/checkpoints/ckpt.5.bin
+{"state": {"num_steps": 5, "num_samples": 16384001, "start_time_s": 1758715392.0, "elapsed_time_s": 4326.634765625, "phase": "valid"}, "gpu": {"mem/0": 75.73780943856595, "temp/0": 31.0, "util/0": 0.0}, "cpu": {"child_procs": 6, "percent": 97.3, "child_percent": 0.0}, "mem": {"percent": 1.0907813819291476, "shared": 497123328, "child_percent": 0.01801332580383907, "rss/cur": 23598665728, "rss/total": 25936936960, "vms/cur": 107127091200, "vms/total": 131245682688}, "train": {"advantages": -0.028254205361008644, "loss_kl": 9.523816515866201e-06, "loss_policy": 0.016153384000062943, "loss_value": 0.008802595548331738, "off_policy_log_probs": -1.0798084735870361, "off_policy_values": -0.948988676071167, "on_policy_log_probs": -1.0793322324752808, "on_policy_values": -0.9804028272628784, "value_targets": -0.9543273448944092}, "reward": {"_total": -5.0161285400390625, "ankle_knee_penalty": -3.096964178439521e-07, "arm_pose_penalty": -0.25324806571006775, "contact_force_penalty": 0.0, "feet_airtime": -0.06891186535358429, "feet_orientation": 0.05313441902399063, "feet_too_close_penalty": -0.08948181569576263, "reachability_penalty": -5.410699367523193, "simple_single_foot_contact": 0.21036620438098907, "stay_alive": -0.017609791830182076, "straight_leg_penalty": -0.03509172424674034, "upright": 0.5954129695892334}, "termination": {"episode_length": 0.7310110330581665, "mean_terminations": 218.69140625, "prct/episode_length": 0.0, "prct/not_upright": 0.9999999403953552}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0012069040239036392, "samples/second": 3954.7833530533544, "dt": 1650.6395947933197}}
+  [1;36mINFO[0m  [90m2025-09-24 16:10:23[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008/checkpoints/ckpt.6.bin
+{"status": {"message": "Step 3 time: 39m, 21s", "filename": "rl.py", "lineno": 2591}}
+  [1;36mINFO[0m  [90m2025-09-24 16:11:30[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_007/checkpoints/ckpt.5.bin
+{"state": {"num_steps": 6, "num_samples": 20480000, "start_time_s": 1758715392.0, "elapsed_time_s": 5980.4501953125, "phase": "valid"}, "gpu": {"mem/0": 75.73780943856595, "temp/0": 31.0, "util/0": 0.0}, "cpu": {"child_procs": 6, "percent": 98.4, "child_percent": 0.0}, "mem": {"percent": 1.0798383402245624, "shared": 174227456, "child_percent": 0.01284936500775929, "rss/cur": 23361916928, "rss/total": 25029865472, "vms/cur": 107212681216, "vms/total": 131402080256}, "train": {"advantages": -0.0016920380294322968, "loss_kl": 1.1012485629180446e-05, "loss_policy": -0.012949259020388126, "loss_value": 0.0069763679057359695, "off_policy_log_probs": -1.0700225830078125, "off_policy_values": -0.8792360424995422, "on_policy_log_probs": -1.069472074508667, "on_policy_values": -0.9141119718551636, "value_targets": -0.8796110153198242}, "reward": {"_total": -4.940685272216797, "ankle_knee_penalty": -3.156567345286021e-07, "arm_pose_penalty": -0.23366670310497284, "contact_force_penalty": 0.0, "feet_airtime": -0.07431690394878387, "feet_orientation": 0.056169863790273666, "feet_too_close_penalty": -0.0877087414264679, "reachability_penalty": -5.343563556671143, "simple_single_foot_contact": 0.20767836272716522, "stay_alive": -0.01984555274248123, "straight_leg_penalty": -0.033078789710998535, "upright": 0.5876477360725403}, "termination": {"episode_length": 0.6764244437217712, "mean_terminations": 236.400390625, "prct/episode_length": 0.0, "prct/not_upright": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0010344731728368147, "samples/second": 3531.001767201945, "dt": 1657.222251176834}}
+  [1;36mINFO[0m  [90m2025-09-24 16:37:56[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008/checkpoints/ckpt.7.bin
+{"state": {"num_steps": 5, "num_samples": 16384001, "start_time_s": 1758715008.0, "elapsed_time_s": 5857.0849609375, "phase": "valid"}, "gpu": {"mem/0": 75.32470703125, "temp/0": 28.0, "util/0": 0.0}, "cpu": {"child_procs": 6, "percent": 98.2, "child_percent": 0.0}, "mem": {"percent": 1.383337295680109, "shared": 480899072, "child_percent": 0.02378267083516765, "rss/cur": 22426664960, "rss/total": 24740052992, "vms/cur": 65044316160, "vms/total": 80593756160}, "train": {"advantages": -0.031843751668930054, "loss_kl": 9.1616448116838e-06, "loss_policy": 0.021018359810113907, "loss_value": 0.009053856134414673, "off_policy_log_probs": -1.076597809791565, "off_policy_values": -0.9569138288497925, "on_policy_log_probs": -1.0761396884918213, "on_policy_values": -0.9783639907836914, "value_targets": -0.9630234241485596}, "reward": {"_total": -4.992117404937744, "ankle_knee_penalty": -3.126492913452239e-07, "arm_pose_penalty": -0.2568039894104004, "contact_force_penalty": 0.0, "feet_airtime": -0.06408922374248505, "feet_orientation": 0.051921360194683075, "feet_too_close_penalty": -0.08625415712594986, "reachability_penalty": -5.394322395324707, "simple_single_foot_contact": 0.2126479297876358, "stay_alive": -0.017147449776530266, "straight_leg_penalty": -0.035558756440877914, "upright": 0.5974894165992737}, "termination": {"episode_length": 0.7432863712310791, "mean_terminations": 215.029296875, "prct/episode_length": 0.0, "prct/not_upright": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0008767234326194626, "samples/second": 2872.8475223546575, "dt": 2292.936126232147}}
+  [1;36mINFO[0m  [90m2025-09-24 16:49:40[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_007/checkpoints/ckpt.6.bin
+{"state": {"num_steps": 7, "num_samples": 24576000, "start_time_s": 1758715392.0, "elapsed_time_s": 7637.6904296875, "phase": "valid"}, "gpu": {"mem/0": 75.73780943856595, "temp/0": 31.0, "util/0": 0.0}, "cpu": {"child_procs": 6, "percent": 98.2, "child_percent": 0.0}, "mem": {"percent": 1.0823421763239245, "shared": 172195840, "child_percent": 0.013431794834123859, "rss/cur": 23416086528, "rss/total": 25159639040, "vms/cur": 107268648960, "vms/total": 131532091392}, "train": {"advantages": 0.0019074762240052223, "loss_kl": 1.277759929507738e-05, "loss_policy": -0.01935129053890705, "loss_value": 0.0056283678859472275, "off_policy_log_probs": -1.0594428777694702, "off_policy_values": -0.7971532344818115, "on_policy_log_probs": -1.058803915977478, "on_policy_values": -0.8561719655990601, "value_targets": -0.7969918251037598}, "reward": {"_total": -4.859232425689697, "ankle_knee_penalty": -3.191594259988051e-07, "arm_pose_penalty": -0.21233795583248138, "contact_force_penalty": 0.0, "feet_airtime": -0.08047999441623688, "feet_orientation": 0.060780297964811325, "feet_too_close_penalty": -0.0834810808300972, "reachability_penalty": -5.274148464202881, "simple_single_foot_contact": 0.20421048998832703, "stay_alive": -0.022746343165636063, "straight_leg_penalty": -0.03022325225174427, "upright": 0.5791937708854675}, "termination": {"episode_length": 0.6169332265853882, "mean_terminations": 259.376953125, "prct/episode_length": 0.0, "prct/not_upright": 1.0}, "curriculum": {"level": 0.5}, "timers": {"steps/second": 0.0009392411460131054, "samples/second": 3297.5414891936575, "dt": 1652.7713680267334}}
+  [1;36mINFO[0m  [90m2025-09-24 17:05:30[0m [[1;34mxax.task.mixins.checkpointing[0m] Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008/checkpoints/ckpt.8.bin

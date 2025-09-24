@@ -1,0 +1,20 @@
+2025-09-24 14:03:59,265 - xax.task.mixins.train - [1;32mSTATUS[0m - /cluster/work/sebasrb/zbot-policy-walking-fixed/train.py
+2025-09-24 14:03:59,266 - xax.task.mixins.train - [1;32mSTATUS[0m - /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008
+2025-09-24 14:03:59,766 - jax._src.xla_bridge - [1;36mINFO[0m - Unable to initialize backend 'tpu': INTERNAL: Failed to open libtpu.so: libtpu.so: cannot open shared object file: No such file or directory
+2025-09-24 14:03:59,967 - xax.task.mixins.train - [1;32mSTATUS[0m - JAX devices: [CudaDevice(id=0)]
+2025-09-24 14:04:05,365 - xax.task.mixins.train - [1;36mINFO[0m - Starting a new training run
+2025-09-24 14:04:07,342 - ksim.task.rl - [1;35mPING[0m - Model size: 1,095,597 parameters
+2025-09-24 14:04:07,343 - ksim.task.rl - [1;35mPING[0m - Optimizer size: 2,191,194 parameters
+2025-09-24 14:04:07,343 - root - [1;36mINFO[0m - Using JAX default device: cuda:0.
+2025-09-24 14:04:08,340 - ksim.engine - [1;33mWARNING[0m - `max_action_latency=0.100000` is greater than `ctrl_dt=0.020000`
+2025-09-24 14:04:11,869 - root - [1;36mINFO[0m - Using JAX default device: cuda:0.
+2025-09-24 14:34:00,667 - root - [1;32mSTATUS[0m - Tensorboard: http://idun-01-03:9249/
+2025-09-24 14:35:30,818 - ksim.task.rl - [1;32mSTATUS[0m - Step 1 time: 30m, 42s
+2025-09-24 14:48:32,389 - xax.task.mixins.checkpointing - [1;36mINFO[0m - Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008/checkpoints/ckpt.3.bin
+2025-09-24 14:48:33,132 - ksim.task.rl - [1;32mSTATUS[0m - Step 2 time: 13m, 2s
+2025-09-24 15:15:15,947 - xax.task.mixins.checkpointing - [1;36mINFO[0m - Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008/checkpoints/ckpt.4.bin
+2025-09-24 15:16:54,829 - ksim.task.rl - [1;32mSTATUS[0m - Step 3 time: 28m, 21s
+2025-09-24 15:42:46,589 - xax.task.mixins.checkpointing - [1;36mINFO[0m - Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008/checkpoints/ckpt.5.bin
+2025-09-24 16:10:23,808 - xax.task.mixins.checkpointing - [1;36mINFO[0m - Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008/checkpoints/ckpt.6.bin
+2025-09-24 16:37:56,581 - xax.task.mixins.checkpointing - [1;36mINFO[0m - Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008/checkpoints/ckpt.7.bin
+2025-09-24 17:05:30,701 - xax.task.mixins.checkpointing - [1;36mINFO[0m - Saving checkpoint to /cluster/work/sebasrb/zbot-policy-walking-fixed/zbot_walking_task/run_008/checkpoints/ckpt.8.bin
