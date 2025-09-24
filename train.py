@@ -1780,6 +1780,7 @@ if __name__ == "__main__":
             save_every_n_seconds=60,
             valid_every_n_steps=5,
             # render_full_every_n_seconds=10,  # Parameter not available in this version
+            render_length_seconds=None,  # Disable rendering to fix headless cluster issues
             render_azimuth=145.0,
             action_latency_range=(0.003, 0.10),
         ),
