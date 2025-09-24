@@ -46,8 +46,8 @@ pip freeze
 echo "Checking JAX backend:"
 python -c "import jax; print(jax.default_backend())"  # Should print "gpu"
 
-# Run training in headless mode (no GUI)
-python -m train run_mode=headless
+# Run training (will handle GUI automatically on headless system)
+python -m train
 
 # Example: to load pretrained checkpoint and run in view mode, uncomment:
 # python -m train load_from_ckpt_path=assets/ckpt.bin run_mode=view
