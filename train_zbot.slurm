@@ -22,7 +22,7 @@ echo "Node(s): $SLURM_JOB_NODELIST"
 mkdir -p slurm_outputs
 
 # Path to your conda env (change if needed)
-ENV_PATH="/cluster/work/$USER/zbot-policy-walking/ksim-env/"
+ENV_PATH="/cluster/work/$USER/zbot-policy-walking-fixed/ksim-env/"
 
 module purge
 module load Anaconda3/2024.02-1
