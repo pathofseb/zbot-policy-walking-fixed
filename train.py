@@ -1764,9 +1764,9 @@ class ZbotWalkingTask(ksim.PPOTask[ZbotWalkingTaskConfig]):
 if __name__ == "__main__":
     ZbotWalkingTask.launch(
         ZbotWalkingTaskConfig(
-            # Training parameters - Standard GPU configuration
-            num_envs=2048,
-            batch_size=256,
+            # Training parameters - Optimized for A100/H100 40GB VRAM
+            num_envs=512,
+            batch_size=64,
             learning_rate=1e-3,
             num_passes=4,
             #epochs_per_log_step=1,
