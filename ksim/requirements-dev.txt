@@ -1,5 +1,3 @@
-# requirements-dev.txt
-
-mypy
-pytest
-ruff
+version https://git-lfs.github.com/spec/v1
+oid sha256:f02216fde78f028ef0c59ba816e756656283f1331d400a860b8329012330891e
+size 41
