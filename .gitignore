@@ -25,4 +25,11 @@ build/
 dist/
 *.so
 out*/
+<<<<<<< HEAD
 **/run_*/
+=======
+zbot_walking_task/*/tensorboard/
+zbot_walking_task/*/tensorboard/
+*.tfevents.*
+ksim-env/
+>>>>>>> e293b07b34c4f33bc252a224c3a5e1984ef0ee6f
