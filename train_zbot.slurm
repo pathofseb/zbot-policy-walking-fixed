@@ -4,15 +4,9 @@
 #SBATCH --time=06:00:00
 #SBATCH --partition=GPUQ
 #SBATCH --gres=gpu:1
-<<<<<<< HEAD
-#SBATCH --mem=80GB
-#SBATCH --nodes=1
-#SBATCH --constraint="h200&gpu80g"
-=======
 #SBATCH --mem=40GB
 #SBATCH --nodes=1
 #SBATCH --constraint="(h100|h200)&gpu80g"
->>>>>>> e293b07b34c4f33bc252a224c3a5e1984ef0ee6f
 #SBATCH --output=slurm_outputs/ksim_output.txt
 #SBATCH --error=slurm_outputs/ksim_error.txt
 #SBATCH --mail-user=sebasrb@ntnu.no
@@ -58,7 +52,7 @@ export MUJOCO_GL=osmesa
 echo "Set MUJOCO_GL=osmesa for headless rendering"
 
 # Run training
-python -m train
+python train_original.py
 
 # Example: to load pretrained checkpoint and run in view mode, uncomment:
 # python -m train load_from_ckpt_path=assets/ckpt.bin run_mode=view
